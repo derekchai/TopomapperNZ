@@ -16,6 +16,8 @@
 		A86508B42C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508B32C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift */; };
 		A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508C22C3B4A600091EE0D /* Symbol.swift */; };
 		A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508C42C3B4B320091EE0D /* RoutesScene.swift */; };
+		A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */; };
+		A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		A86508B32C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A86508C22C3B4A600091EE0D /* Symbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbol.swift; sourceTree = "<group>"; };
 		A86508C42C3B4B320091EE0D /* RoutesScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesScene.swift; sourceTree = "<group>"; };
+		A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSidebar.swift; sourceTree = "<group>"; };
+		A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
+				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
+				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -287,7 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
+				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,

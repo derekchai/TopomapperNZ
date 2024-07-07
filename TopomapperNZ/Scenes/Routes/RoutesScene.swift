@@ -10,7 +10,8 @@ import SwiftUI
 struct RoutesScene: View {
     var body: some View {
         NavigationSplitView {
-            Text("Sidebar")
+            RoutesSidebar()
+                .navigationTitle("My Routes")
         } content: {
             Text("Content")
         } detail: {
