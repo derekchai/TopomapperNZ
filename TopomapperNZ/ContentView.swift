@@ -12,7 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             Tab("Routes", systemImage: Symbol.path) {
-                
+                RoutesScene()
             }
             
             Tab("Map", systemImage: Symbol.map) {
