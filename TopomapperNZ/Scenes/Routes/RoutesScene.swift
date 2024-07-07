@@ -17,7 +17,7 @@ struct RoutesScene: View {
                 .navigationTitle("My Routes")
         } content: {
             if let selectedRoute {
-                RoutesContent(
+                RouteContent(
                     preferredColumn: $preferredColumn,
                     route: selectedRoute
                 )
