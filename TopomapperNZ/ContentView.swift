@@ -11,15 +11,15 @@ import SwiftData
 struct ContentView: View {
     var body: some View {
         TabView {
-            Tab("Routes", systemImage: "point.topleft.down.to.point.bottomright.curvepath") {
+            Tab("Routes", systemImage: Symbol.path) {
                 
             }
             
-            Tab("Map", systemImage: "map") {
+            Tab("Map", systemImage: Symbol.map) {
                 
             }
             
-            Tab("Profile", systemImage: "person.crop.circle") {
+            Tab("Profile", systemImage: Symbol.profile) {
                 
             }
         }
