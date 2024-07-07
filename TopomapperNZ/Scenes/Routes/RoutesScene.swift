@@ -9,14 +9,18 @@ import SwiftUI
 
 struct RoutesScene: View {
     @State private var selectedRoute: Route? = nil
+    @State private var preferredColumn = NavigationSplitViewColumn.sidebar
     
     var body: some View {
-        NavigationSplitView {
+        NavigationSplitView(preferredCompactColumn: $preferredColumn) {
             RoutesSidebar(selectedRoute: $selectedRoute)
                 .navigationTitle("My Routes")
         } content: {
             if let selectedRoute {
-                RoutesContent(route: selectedRoute)
+                RoutesContent(
+                    preferredColumn: $preferredColumn,
+                    route: selectedRoute
+                )
                     .navigationTitle(selectedRoute.name)
             } else {
                 Text("Select a Route")
