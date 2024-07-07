@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct RouteListItem: View {
+    var route: Route
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Kaweka Traverse")
+            Text(route.name)
                 .font(.headline)
         
-            Text("8 July 2024")
+            Text(route.creationDate.formatted())
                 .font(.subheadline)
             
             HStack {
@@ -30,5 +32,5 @@ struct RouteListItem: View {
 }
 
 #Preview {
-    RouteListItem()
+    RouteListItem(route: Route.sampleData.first!)
 }
