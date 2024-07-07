@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct RoutesSidebar: View {
+    @Binding var selectedRoute: Route?
+    
+    @State private var routes = Route.sampleData
+    
     var body: some View {
-        List {
-            RouteListItem()
-            RouteListItem()
-            RouteListItem()
+        List(routes, id: \.self, selection: $selectedRoute) { route in
+            NavigationLink(value: route) {
+                RouteListItem(route: route)
+            }
         }
     }
 }
 
 #Preview {
-    RoutesSidebar()
+    @Previewable @State var routeSelection: Route? = nil
+    
+    RoutesSidebar(selectedRoute: $routeSelection)
 }

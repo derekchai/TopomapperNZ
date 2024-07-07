@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct RoutesScene: View {
+    @State private var selectedRoute: Route? = nil
+    
     var body: some View {
         NavigationSplitView {
-            RoutesSidebar()
+            RoutesSidebar(selectedRoute: $selectedRoute)
                 .navigationTitle("My Routes")
         } content: {
             Text("Content")

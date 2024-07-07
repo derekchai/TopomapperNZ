@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Route {
+final class Route: Hashable {
     var name: String
     var creationDate: Date
     
