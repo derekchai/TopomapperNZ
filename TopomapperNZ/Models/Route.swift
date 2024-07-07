@@ -15,4 +15,15 @@ final class Route {
         self.name = name
         self.creationDate = creationDate
     }
+    
+    // MARK: - Equatable Conformance
+    static func == (lhs: Route, rhs: Route) -> Bool {
+        lhs.name == rhs.name && lhs.creationDate == rhs.creationDate
+    }
+    
+    // MARK: - Hashable Conformance
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(creationDate)
+    }
 }
