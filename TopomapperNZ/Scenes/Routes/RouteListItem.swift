@@ -9,7 +9,23 @@ import SwiftUI
 
 struct RouteListItem: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text("Kaweka Traverse")
+                .font(.headline)
+        
+            Text("8 July 2024")
+                .font(.subheadline)
+            
+            HStack {
+                Text("74.3 km")
+                Image(systemName: Symbol.distance)
+                
+                Text("1294 m")
+                Image(systemName: Symbol.elevationGain)
+            }
+            .font(.caption)
+            .foregroundStyle(.secondary)
+        }
     }
 }
 
