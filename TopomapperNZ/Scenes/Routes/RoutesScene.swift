@@ -15,7 +15,12 @@ struct RoutesScene: View {
             RoutesSidebar(selectedRoute: $selectedRoute)
                 .navigationTitle("My Routes")
         } content: {
-            Text("Content")
+            if let selectedRoute {
+                RoutesContent(route: selectedRoute)
+                    .navigationTitle(selectedRoute.name)
+            } else {
+                Text("Select a Route")
+            }
         } detail: {
             Text("Detail")
         }
