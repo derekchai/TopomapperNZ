@@ -15,7 +15,11 @@ extension Route {
         for i in 0..<10 {
             let randomName = names.randomElement() ?? "Route \(i)"
             let randomDate = Date(timeIntervalSinceNow: -Double.random(in: 0...1000000))
-            let route = Route(name: randomName, creationDate: randomDate)
+            let route = Route(
+                name: randomName,
+                creationDate: randomDate,
+                points: []
+            )
             routes.append(route)
         }
         
