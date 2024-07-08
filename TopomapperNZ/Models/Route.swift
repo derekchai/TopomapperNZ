@@ -13,9 +13,10 @@ final class Route: Hashable {
     var points: [RoutePoint]
     
     // MARK: - Initializer
-    init(name: String, creationDate: Date) {
+    init(name: String, creationDate: Date, points: [RoutePoint]) {
         self.name = name
         self.creationDate = creationDate
+        self.points = points
     }
     
     // MARK: - Equatable Conformance
