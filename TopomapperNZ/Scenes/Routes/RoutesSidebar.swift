@@ -13,9 +13,17 @@ struct RoutesSidebar: View {
     @State private var routes = Route.sampleData
     
     var body: some View {
-        List(routes, id: \.self, selection: $selectedRoute) { route in
-            NavigationLink(value: route) {
-                RouteListItem(route: route)
+        NavigationStack {
+            List(routes, id: \.self, selection: $selectedRoute) { route in
+                NavigationLink(value: route) {
+                    RouteListItem(route: route)
+                }
+            }
+            .navigationTitle("My Routes")
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Import GPX") {}
+                }
             }
         }
     }
