@@ -232,9 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */,
+				A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */,
 				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
-				A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -13,11 +13,6 @@ struct RouteListItem: View {
     
     var body: some View {
         HStack {
-            Map(interactionModes: [])
-                .frame(width: 100, height: 100)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
-                .padding(.trailing)
-            
             VStack(alignment: .leading) {
                 Text(route.name)
                     .font(.headline)
