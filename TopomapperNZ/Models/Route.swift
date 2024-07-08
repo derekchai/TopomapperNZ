@@ -10,7 +10,9 @@ import Foundation
 final class Route: Hashable {
     var name: String
     var creationDate: Date
+    var points: [RoutePoint]
     
+    // MARK: - Initializer
     init(name: String, creationDate: Date) {
         self.name = name
         self.creationDate = creationDate

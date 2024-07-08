@@ -22,6 +22,8 @@
 		A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D12C3B55530091EE0D /* Route+SampleData.swift */; };
 		A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D32C3B591D0091EE0D /* RouteContent.swift */; };
 		A86508D72C3B60360091EE0D /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D62C3B60360091EE0D /* Statistic.swift */; };
+		A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D82C3B695C0091EE0D /* RoutePoint.swift */; };
+		A86508DB2C3B6A8B0091EE0D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DA2C3B6A8B0091EE0D /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		A86508D12C3B55530091EE0D /* Route+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SampleData.swift"; sourceTree = "<group>"; };
 		A86508D32C3B591D0091EE0D /* RouteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContent.swift; sourceTree = "<group>"; };
 		A86508D62C3B60360091EE0D /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		A86508D82C3B695C0091EE0D /* RoutePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePoint.swift; sourceTree = "<group>"; };
+		A86508DA2C3B6A8B0091EE0D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				A86508CF2C3B54590091EE0D /* Route.swift */,
+				A86508D82C3B695C0091EE0D /* RoutePoint.swift */,
+				A86508DA2C3B6A8B0091EE0D /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
+				A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
@@ -330,6 +337,7 @@
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
+				A86508DB2C3B6A8B0091EE0D /* Location.swift in Sources */,
 				A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
