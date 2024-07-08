@@ -27,7 +27,7 @@ struct RoutesSidebar: View {
             }
         }
         .fileImporter(
-            isPresented: viewModel.isPresentingFileImporterBinding,
+            isPresented: $viewModel.isPresentingFileImporter,
             allowedContentTypes: [.xml],
             allowsMultipleSelection: false,
             onCompletion: viewModel.handleFileImporterResult,
