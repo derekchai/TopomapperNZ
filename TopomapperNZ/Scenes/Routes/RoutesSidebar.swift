@@ -22,17 +22,13 @@ struct RoutesSidebar: View {
             .navigationTitle("My Routes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Import GPX", action: viewModel.presentFileImporter)
+                    Button("New Route", action: viewModel.presentNewRouteSheet)
                 }
             }
         }
-        .fileImporter(
-            isPresented: $viewModel.isPresentingFileImporter,
-            allowedContentTypes: [.xml],
-            allowsMultipleSelection: false,
-            onCompletion: viewModel.handleFileImporterResult,
-            onCancellation: {}
-        )
+        .sheet(isPresented: $viewModel.isPresentingNewRouteSheet) {
+            NewRouteSheet()
+        }
     }
 }
 
