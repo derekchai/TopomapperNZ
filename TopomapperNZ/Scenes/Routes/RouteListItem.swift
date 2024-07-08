@@ -6,27 +6,35 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct RouteListItem: View {
     var route: Route
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(route.name)
-                .font(.headline)
-        
-            Text(route.creationDate.formatted())
-                .font(.subheadline)
+        HStack {
+            Map(interactionModes: [])
+                .frame(width: 100, height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .padding(.trailing)
             
-            HStack {
-                Text("74.3 km")
-                Image(systemName: Symbol.distance)
+            VStack(alignment: .leading) {
+                Text(route.name)
+                    .font(.headline)
                 
-                Text("1294 m")
-                Image(systemName: Symbol.elevationGain)
+                Text(route.creationDate.formatted())
+                    .font(.subheadline)
+                
+                HStack {
+                    Text("74.3 km")
+                    Image(systemName: Symbol.distance)
+                    
+                    Text("1294 m")
+                    Image(systemName: Symbol.elevationGain)
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
             }
-            .font(.caption)
-            .foregroundStyle(.secondary)
         }
     }
 }
