@@ -11,18 +11,16 @@ import Foundation
 
 @Suite("GPX parsing tests")
 final class GPXParsingTests {
+    let gpxParser = GPXParser()
+    
     @Test("Test parsing GPX file")
     func testParsingGPXFile() throws {
         let bundle = Bundle(for: type(of: self))
         
-        guard let gpxURL = bundle.url(forResource: "SampleGPX", withExtension: "gpx") else {
-            throw TestError.unableToCreateURL
-        }
+        let gpxURL = try #require(
+            bundle.url(forResource: "SampleGPX", withExtension: "gpx")
+        )
         
-        #expect(gpxURL != nil)
-        
-        let gpxParser = GPXParser()
-            
         let locations = try gpxParser.parseFile(at: gpxURL)
         
         #expect(!locations.isEmpty)
