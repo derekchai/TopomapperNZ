@@ -21,7 +21,7 @@ final class GPXParsingTests {
             bundle.url(forResource: "SampleGPX", withExtension: "gpx")
         )
         
-        let locations = try gpxParser.parseFile(at: gpxURL)
+        let locations = try gpxParser.parsed(at: gpxURL)
         
         #expect(!locations.isEmpty)
     }
@@ -39,7 +39,7 @@ final class GPXParsingTests {
         try #require(
             throws: GPXParser.ParsingError.failedToParseGPXFile,
             performing: {
-                try gpxParser.parseFile(at: txtURL)
+                try gpxParser.parsed(at: txtURL)
             }
         )
     }
