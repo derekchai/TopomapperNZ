@@ -25,11 +25,22 @@ final class GPXParsingTests {
         
         #expect(!locations.isEmpty)
     }
-}
+    
+    @Test("Test parsing invalid file (.txt)")
+    func testParsingInvalidFile() throws {
+        let bundle = Bundle(for: type(of: self))
+        
+        let txtURL = try #require(
+            bundle.url(forResource: "TextFile", withExtension: "txt")
+        )
+        
+        #expect(txtURL != nil)
 
-// MARK: - Errors
-extension GPXParsingTests {
-    enum TestError: Error {
-        case unableToCreateURL
+        try #require(
+            throws: GPXParser.ParsingError.failedToParseGPXFile,
+            performing: {
+                try gpxParser.parseFile(at: txtURL)
+            }
+        )
     }
 }
