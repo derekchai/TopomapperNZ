@@ -34,6 +34,7 @@ struct RoutesScene: View {
         } detail: {
             Text("Detail")
         }
+        .searchable(text: .constant(""), prompt: "Search Routes")
     }
 }
 
