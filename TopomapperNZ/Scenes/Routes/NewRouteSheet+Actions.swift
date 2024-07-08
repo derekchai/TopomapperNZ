@@ -27,7 +27,10 @@ extension NewRouteSheet {
             
             let gotAccess = url.startAccessingSecurityScopedResource()
             
-            guard gotAccess else { return }
+            guard gotAccess else {
+                url.stopAccessingSecurityScopedResource()
+                return
+            }
             
             selectedFileURL = url
             selectedFileName = url.lastPathComponent
