@@ -39,7 +39,18 @@ class RoutePoint: Location {
         )
     }
 
-    required init(from decoder: any Decoder) throws {
-        fatalError("init(from:) has not been implemented")
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.distanceFromStart = try container.decode(CLLocationDistance.self, forKey: .distanceFromStart)
+        self.grade = try container.decode(Double.self, forKey: .grade)
+        
+        // Decode the properties of the superclass Location
+        try super.init(from: decoder)
+    }
+    
+    // MARK: - Coding Keys
+    enum CodingKeys: String, CodingKey {
+        case distanceFromStart
+        case grade
     }
 }
