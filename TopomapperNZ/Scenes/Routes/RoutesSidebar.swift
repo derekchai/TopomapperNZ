@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State private var viewModel = ViewModel()
     
+    @Query private var routes: [Route]
+    
     var body: some View {
         NavigationStack {
-            List(viewModel.routes, id: \.self, selection: $selectedRoute) { route in
+            List(routes, id: \.self, selection: $selectedRoute) { route in
                 NavigationLink(value: route) {
                     RouteListItem(route: route)
                 }
