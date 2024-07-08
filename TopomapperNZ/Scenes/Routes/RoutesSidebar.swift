@@ -11,6 +11,7 @@ struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State private var routes = Route.sampleData
+    @State private var isPresentingFileImporter = false
     
     var body: some View {
         NavigationStack {
@@ -22,10 +23,19 @@ struct RoutesSidebar: View {
             .navigationTitle("My Routes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Import GPX") {}
+                    Button("Import GPX") {
+                        isPresentingFileImporter = true
+                    }
                 }
             }
         }
+        .fileImporter(
+            isPresented: $isPresentingFileImporter,
+            allowedContentTypes: [.xml],
+            allowsMultipleSelection: false,
+            onCompletion: { result in },
+            onCancellation: {}
+        )
     }
 }
 
