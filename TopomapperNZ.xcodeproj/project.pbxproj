@@ -21,6 +21,7 @@
 		A86508D02C3B54590091EE0D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508CF2C3B54590091EE0D /* Route.swift */; };
 		A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D12C3B55530091EE0D /* Route+SampleData.swift */; };
 		A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D32C3B591D0091EE0D /* RouteContent.swift */; };
+		A86508D72C3B60360091EE0D /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D62C3B60360091EE0D /* Statistic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A86508CF2C3B54590091EE0D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		A86508D12C3B55530091EE0D /* Route+SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SampleData.swift"; sourceTree = "<group>"; };
 		A86508D32C3B591D0091EE0D /* RouteContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContent.swift; sourceTree = "<group>"; };
+		A86508D62C3B60360091EE0D /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		A86508C62C3B4B360091EE0D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A86508D52C3B60300091EE0D /* Shared */,
 				A86508C72C3B4B750091EE0D /* Routes */,
 			);
 			path = Scenes;
@@ -165,9 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
+				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
 				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
 				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
-				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -178,6 +181,14 @@
 				A86508CF2C3B54590091EE0D /* Route.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A86508D52C3B60300091EE0D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A86508D62C3B60360091EE0D /* Statistic.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +329,7 @@
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
+				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
 				A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
