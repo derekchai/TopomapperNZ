@@ -11,7 +11,7 @@
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
 		A865089E2C3B48790091EE0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089D2C3B48790091EE0D /* Preview Assets.xcassets */; };
-		A86508A82C3B48790091EE0D /* TopomapperNZTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508A72C3B48790091EE0D /* TopomapperNZTests.swift */; };
+		A86508A82C3B48790091EE0D /* GPXParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508A72C3B48790091EE0D /* GPXParsingTests.swift */; };
 		A86508B22C3B48790091EE0D /* TopomapperNZUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508B12C3B48790091EE0D /* TopomapperNZUITests.swift */; };
 		A86508B42C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508B32C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift */; };
 		A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508C22C3B4A600091EE0D /* Symbol.swift */; };
@@ -53,7 +53,7 @@
 		A865089A2C3B48790091EE0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A865089D2C3B48790091EE0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A86508A32C3B48790091EE0D /* TopomapperNZTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopomapperNZTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A86508A72C3B48790091EE0D /* TopomapperNZTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZTests.swift; sourceTree = "<group>"; };
+		A86508A72C3B48790091EE0D /* GPXParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParsingTests.swift; sourceTree = "<group>"; };
 		A86508AD2C3B48790091EE0D /* TopomapperNZUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopomapperNZUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508B12C3B48790091EE0D /* TopomapperNZUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZUITests.swift; sourceTree = "<group>"; };
 		A86508B32C3B48790091EE0D /* TopomapperNZUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508E52C3B97920091EE0D /* Test Data */,
-				A86508A72C3B48790091EE0D /* TopomapperNZTests.swift */,
+				A86508A72C3B48790091EE0D /* GPXParsingTests.swift */,
 			);
 			path = TopomapperNZTests;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A86508A82C3B48790091EE0D /* TopomapperNZTests.swift in Sources */,
+				A86508A82C3B48790091EE0D /* GPXParsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
