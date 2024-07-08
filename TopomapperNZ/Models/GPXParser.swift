@@ -15,7 +15,7 @@ final class GPXParser: NSObject, XMLParserDelegate {
     private var temporaryCoordinate: CLLocationCoordinate2D?
     
     // MARK: - Functions
-    func parseFile(at url: URL) throws(ParsingError) -> [Location] {
+    func parseFile(at url: URL) async throws(ParsingError) -> [Location] {
         guard let xmlParser = XMLParser(contentsOf: url) else {
             throw ParsingError.unableToCreateXMLParser
         }
