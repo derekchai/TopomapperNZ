@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Route: Hashable {
+final class Route: Hashable, Codable {
     var name: String
     var creationDate: Date
     var points: [RoutePoint]

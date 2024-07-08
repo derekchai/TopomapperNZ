@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class Location {
+class Location: Codable {
     let coordinate: CLLocationCoordinate2D
     let elevation: CLLocationDistance
     
