@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-final class Route: Hashable, Codable {
+final class Route: Codable {
     var name: String
     var creationDate: Date
     var points: [RoutePoint]
@@ -42,9 +42,5 @@ final class Route: Hashable, Codable {
         try container.encode(points, forKey: .points)
     }
     
-    // MARK: - Hashable Conformance
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(name)
-        hasher.combine(creationDate)
-    }
+    
 }
