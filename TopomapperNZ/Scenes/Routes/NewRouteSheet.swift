@@ -74,7 +74,7 @@ struct NewRouteSheet: View {
         ) { _ in
             Button("Ok", action: dismissErrorAlert)
         } message: { error in
-            Text("An error occurred: \(error.localizedDescription)")
+            Text(error.localizedDescription)
         }
     }
 }
