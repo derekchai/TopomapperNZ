@@ -12,7 +12,7 @@ class RoutePoint: Location {
     let distanceFromStart: CLLocationDistance
     let grade: Double
     
-    // MARK: - Initializer
+    // MARK: - Initializers
     init(
         coordinate: CLLocationCoordinate2D,
         elevation: CLLocationDistance,
@@ -23,6 +23,20 @@ class RoutePoint: Location {
         self.grade = grade
         
         super.init(coordinate: coordinate, elevation: elevation)
+    }
+    
+    init(
+        location: Location,
+        distanceFromStart: CLLocationDistance,
+        grade: Double
+    ) {
+        self.distanceFromStart = distanceFromStart
+        self.grade = grade
+        
+        super.init(
+            coordinate: location.coordinate,
+            elevation: location.elevation
+        )
     }
 
     required init(from decoder: any Decoder) throws {
