@@ -34,6 +34,8 @@
 		A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */; };
 		A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */; };
 		A8CA0BF02C3BFBBA007035F7 /* Location+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BEF2C3BFBBA007035F7 /* Location+Distance.swift */; };
+		A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */; };
+		A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Initializers.swift"; sourceTree = "<group>"; };
 		A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Distance.swift"; sourceTree = "<group>"; };
 		A8CA0BEF2C3BFBBA007035F7 /* Location+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+Distance.swift"; sourceTree = "<group>"; };
+		A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRouteSheet.swift; sourceTree = "<group>"; };
+		A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewRouteSheet+Actions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -208,6 +212,8 @@
 		A86508C72C3B4B750091EE0D /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */,
+				A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */,
 				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
 				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
@@ -400,6 +406,7 @@
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
 				A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */,
+				A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A86508E02C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift in Sources */,
@@ -409,6 +416,7 @@
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* Location.swift in Sources */,
+				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
 				A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */,
 				A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */,
 			);
