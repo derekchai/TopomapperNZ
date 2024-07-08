@@ -17,6 +17,11 @@ struct RoutesScene: View {
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
             RoutesSidebar(selectedRoute: $selectedRoute)
                 .navigationTitle("My Routes")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button("Import GPX") {}
+                    }
+                }
             
         // MARK: - Content
         } content: {
