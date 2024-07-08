@@ -27,7 +27,10 @@ final class GPXParsingTests {
         
         #expect(!locations.isEmpty)
     }
-    
+}
+
+// MARK: - Errors
+extension GPXParsingTests {
     enum TestError: Error {
         case unableToCreateURL
     }
