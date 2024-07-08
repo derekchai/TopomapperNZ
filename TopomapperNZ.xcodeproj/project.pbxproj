@@ -27,6 +27,7 @@
 		A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */; };
 		A86508E02C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DF2C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift */; };
 		A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508E12C3B8C630091EE0D /* GPXParser.swift */; };
+		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
 		A86508DF2C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSidebarViewModel.swift; sourceTree = "<group>"; };
 		A86508E12C3B8C630091EE0D /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
+		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */,
+				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* Location.swift in Sources */,
+				A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */,
 				A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

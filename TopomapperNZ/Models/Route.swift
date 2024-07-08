@@ -42,11 +42,6 @@ final class Route: Hashable, Codable {
         try container.encode(points, forKey: .points)
     }
     
-    // MARK: - Equatable Conformance
-    static func == (lhs: Route, rhs: Route) -> Bool {
-        lhs.name == rhs.name && lhs.creationDate == rhs.creationDate
-    }
-    
     // MARK: - Hashable Conformance
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
