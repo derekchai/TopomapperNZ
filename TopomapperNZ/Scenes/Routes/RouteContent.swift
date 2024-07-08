@@ -80,8 +80,8 @@ struct RouteContent: View {
                     .font(.subheadline)
                 
             }
+            .padding()
         }
-        .padding()
     }
 }
 
