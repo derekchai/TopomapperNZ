@@ -6,12 +6,19 @@
 //
 
 import Testing
+import Foundation
 @testable import TopomapperNZ
 
 struct TopomapperNZTests {
-
-    @Test func testExample() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    @Test func testGPXParser() throws {
+        let gpxURL = Bundle.main.url(forResource: "SampleGPX", withExtension: "gpx")
+        
+        #expect(gpxURL != nil)
+        
+        let gpxParser = GPXParser()
+            
+        let locations = try gpxParser.parseFile(at: gpxURL!)
+        
+        print(locations)
     }
-
 }
