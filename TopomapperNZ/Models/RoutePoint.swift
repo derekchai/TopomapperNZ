@@ -24,4 +24,8 @@ class RoutePoint: Location {
         
         super.init(coordinate: coordinate, elevation: elevation)
     }
+
+    required init(from decoder: any Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
 }
