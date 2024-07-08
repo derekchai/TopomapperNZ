@@ -10,12 +10,11 @@ import SwiftUI
 struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
-    @State private var routes = Route.sampleData
-    @State private var isPresentingFileImporter = false
+    @State private var viewModel = ViewModel()
     
     var body: some View {
         NavigationStack {
-            List(routes, id: \.self, selection: $selectedRoute) { route in
+            List(viewModel.routes, id: \.self, selection: $selectedRoute) { route in
                 NavigationLink(value: route) {
                     RouteListItem(route: route)
                 }
@@ -23,17 +22,15 @@ struct RoutesSidebar: View {
             .navigationTitle("My Routes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Import GPX") {
-                        isPresentingFileImporter = true
-                    }
+                    Button("Import GPX", action: viewModel.presentFileImporter)
                 }
             }
         }
         .fileImporter(
-            isPresented: $isPresentingFileImporter,
+            isPresented: viewModel.isPresentingFileImporterBinding,
             allowedContentTypes: [.xml],
             allowsMultipleSelection: false,
-            onCompletion: { result in },
+            onCompletion: viewModel.handleFileImporterResult,
             onCancellation: {}
         )
     }
