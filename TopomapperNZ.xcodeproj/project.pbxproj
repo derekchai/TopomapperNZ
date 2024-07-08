@@ -231,12 +231,20 @@
 		A86508DC2C3B6D3D0091EE0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8CA0BE62C3BF815007035F7 /* Protocol Conformance */ = {
+			isa = PBXGroup;
+			children = (
 				A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */,
 				A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */,
 				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
 			);
-			path = Extensions;
+			path = "Protocol Conformance";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
