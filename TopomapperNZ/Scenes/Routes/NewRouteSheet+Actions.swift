@@ -48,20 +48,33 @@ extension NewRouteSheet {
         
         let gpxParser = GPXParser()
         
-        do {
-            let locations: [Location] = try gpxParser.parsed(at: selectedFileURL)
-            
-            let route = Route(
-                name: routeName,
-                creationDate: Date(),
-                points: [RoutePoint].init(from: locations)
-            )
-            
-            modelContext.insert(route)
-        } catch {
-            showErrorAlert(for: error, title: "This file could not be processed")
+        let gotAccess = selectedFileURL.startAccessingSecurityScopedResource()
+        
+        guard gotAccess else {
+            showErrorAlert(title: "Topomapper has insufficient permissions to access this file")
+            selectedFileURL.stopAccessingSecurityScopedResource()
+            return
         }
         
+        let locations: [Location]
+        
+        do {
+            locations = try gpxParser.parsed(at: selectedFileURL)
+        } catch {
+            showErrorAlert(for: error, title: "This file could not be processed")
+            selectedFileURL.stopAccessingSecurityScopedResource()
+            return
+        }
+        
+        let route = Route(
+            name: routeName,
+            creationDate: Date(),
+            points: [RoutePoint].init(from: locations)
+        )
+        
+        modelContext.insert(route)
+        
+        selectedFileURL.stopAccessingSecurityScopedResource()
         isProcessingGPXFile = false
         dismiss()
     }
