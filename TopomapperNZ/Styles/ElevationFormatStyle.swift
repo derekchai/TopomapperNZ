@@ -19,7 +19,7 @@ struct ElevationFormatStyle: FormatStyle {
 }
 
 extension FormatStyle where Self == ElevationFormatStyle {
-    /// A style for formatting elevation.
+    /// A style for formatting elevation, or cumulative elevation gain/losss.
     static var elevation: Self { Self() }
 }
 
