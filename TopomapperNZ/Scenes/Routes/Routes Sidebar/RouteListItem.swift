@@ -21,10 +21,10 @@ struct RouteListItem: View {
                     .font(.subheadline)
                 
                 HStack {
-                    Text("74.3 km")
+                    Text("\(route.length)")
                     Image(systemName: Symbol.distance)
                     
-                    Text("1294 m")
+                    Text("\(route.cumulativeElevationGain)")
                     Image(systemName: Symbol.elevationGain)
                 }
                 .font(.caption)
