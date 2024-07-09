@@ -16,7 +16,7 @@ final class Route {
     
     // MARK: - Initializers
     init(name: String, creationDate: Date, points: [RoutePoint]) {
-        self.name = name
+        self.name = name.trimmingCharacters(in: .whitespacesAndNewlines)
         self.creationDate = creationDate
         self.points = points
     }
