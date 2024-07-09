@@ -84,6 +84,11 @@ struct RouteContent: View {
                 .padding()
             } // ScrollView
             .navigationTitle(route.name)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Edit") { }
+                }
+            }
         } // NavigationStack
     }
 }
