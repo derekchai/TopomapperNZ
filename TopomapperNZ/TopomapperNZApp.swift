@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct TopomapperNZApp: App {
+    static let subsystem = "com.derekchai.TopomapperNZ"
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Route.self
