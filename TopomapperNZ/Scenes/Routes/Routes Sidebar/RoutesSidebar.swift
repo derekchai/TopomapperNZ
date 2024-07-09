@@ -12,27 +12,38 @@ struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State internal var isPresentingNewRouteSheet = false
-
+    
     @Environment(\.modelContext) internal var modelContext
     @Query internal var routes: [Route]
     
     var body: some View {
         NavigationStack {
-            List(selection: $selectedRoute) {
-                ForEach(routes) { route in
-                    NavigationLink(value: route) {
-                        RouteListItem(route: route)
+            Group {
+                if routes.isEmpty {
+                    ContentUnavailableView(
+                        "No Routes created",
+                        systemImage: Symbol.path,
+                        description: Text("Create a new Route to get started!")
+                    )
+                } else {
+                    List(selection: $selectedRoute) {
+                        ForEach(routes) { route in
+                            NavigationLink(value: route) {
+                                RouteListItem(route: route)
+                            }
+                        }
+                        .onDelete(perform: removeRoutes)
                     }
+                    
                 }
-                .onDelete(perform: removeRoutes)
-            }
+            } // Group
             .navigationTitle("My Routes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("New Route", action: presentNewRouteSheet)
                 }
             }
-        }
+        } // NavigationStack
         .sheet(isPresented: $isPresentingNewRouteSheet) {
             NewRouteSheet()
         }
