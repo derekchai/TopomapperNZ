@@ -36,7 +36,13 @@ extension [RoutePoint] {
             
             distanceFromStart += distanceFromPreviousLocation
             
-            let grade = elevationChangeFromPreviousLocation / distanceFromPreviousLocation
+            let grade: Double
+            
+            if distanceFromPreviousLocation > 0 {
+                grade = elevationChangeFromPreviousLocation / distanceFromPreviousLocation
+            } else {
+                grade = 0
+            }
             
             let routePoint = RoutePoint(
                 location: location,
