@@ -9,37 +9,45 @@ import Foundation
 import CoreLocation
 
 extension [RoutePoint] {
-    init(from locations: [Location]) {
+    init(from gpxTrackPoints: [GPXTrackPoint]) {
         var distanceFromStart: CLLocationDistance = 0
         
-        var previousLocation: Location? = nil
+        var previousTrackPoint: GPXTrackPoint? = nil
         
         var output: [RoutePoint] = []
         
-        for location in locations {
-            guard let previousLocation else {
+        for trackPoint in gpxTrackPoints {
+            guard let previousTrackPoint else {
                 let routePoint = RoutePoint(
-                    location: location,
+                    coordinate: trackPoint.coordinate,
+                    elevation: trackPoint.elevation,
                     distanceFromStart: 0,
                     grade: 0
                 )
                 
                 output.append(routePoint)
                 
-                previousLocation = location
+                previousTrackPoint = trackPoint
                 
                 continue
             }
             
-            let distanceFromPreviousLocation = location.distance(from: previousLocation)
-            let elevationChangeFromPreviousLocation = location.elevation - previousLocation.elevation
+            let distanceFromPreviousTrackPoint = trackPoint.distance(from: previousTrackPoint)
+            let elevationChangeFromPreviousTrackPoint = trackPoint.elevation - previousTrackPoint.elevation
             
-            distanceFromStart += distanceFromPreviousLocation
+            distanceFromStart += distanceFromPreviousTrackPoint
             
-            let grade = elevationChangeFromPreviousLocation / distanceFromPreviousLocation
+            let grade: Double
+            
+            if distanceFromPreviousTrackPoint > 0 {
+                grade = elevationChangeFromPreviousTrackPoint / distanceFromPreviousTrackPoint
+            } else {
+                grade = 0
+            }
             
             let routePoint = RoutePoint(
-                location: location,
+                coordinate: trackPoint.coordinate,
+                elevation: trackPoint.elevation,
                 distanceFromStart: distanceFromStart,
                 grade: grade
             )
