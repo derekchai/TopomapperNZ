@@ -6,8 +6,15 @@
 //
 
 import Foundation
+import os
+import SwiftUI
 
 extension RoutesSidebar {
+    static private let logger = Logger(
+        subsystem: TopomapperNZApp.subsystem,
+        category: String(describing: RoutesSidebar.self)
+    )
+    
     internal func presentNewRouteSheet() {
         isPresentingNewRouteSheet = true
     }
