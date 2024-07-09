@@ -59,10 +59,10 @@ extension NewRouteSheet {
             return
         }
         
-        let locations: [Location]
+        let gpxTrackPoints: [GPXTrackPoint]
         
         do {
-            locations = try gpxParser.parsed(at: selectedFileURL)
+            gpxTrackPoints = try gpxParser.parsed(at: selectedFileURL)
         } catch {
             showErrorAlert(for: error, title: "This file could not be processed")
             selectedFileURL.stopAccessingSecurityScopedResource()
@@ -72,7 +72,7 @@ extension NewRouteSheet {
         let route = Route(
             name: routeName,
             creationDate: Date(),
-            points: [RoutePoint].init(from: locations)
+            points: [RoutePoint].init(from: gpxTrackPoints)
         )
         
         modelContext.insert(route)

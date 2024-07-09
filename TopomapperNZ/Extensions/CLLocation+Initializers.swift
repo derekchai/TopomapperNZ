@@ -9,10 +9,10 @@ import Foundation
 import CoreLocation
 
 extension CLLocation {
-    convenience init(from location: Location) {
+    convenience init(from gpxTrackPoint: GPXTrackPoint) {
         self.init(
-            latitude: location.coordinate.latitude,
-            longitude: location.coordinate.longitude
+            latitude: gpxTrackPoint.coordinate.latitude,
+            longitude: gpxTrackPoint.coordinate.longitude
         )
     }
 }

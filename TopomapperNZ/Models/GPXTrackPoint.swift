@@ -1,5 +1,5 @@
 //
-//  Location.swift
+//  GPXTrackPoint.swift
 //  TopomapperNZ
 //
 //  Created by Derek Chai on 08/07/2024.
@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class Location: Codable {
+class GPXTrackPoint: Codable {
     let coordinate: CLLocationCoordinate2D
     let elevation: CLLocationDistance
     

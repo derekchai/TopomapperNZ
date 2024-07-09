@@ -9,13 +9,13 @@ import Foundation
 import CoreLocation
 
 final class GPXParser: NSObject, XMLParserDelegate {
-    private var locations: [Location] = []
+    private var trackPoints: [GPXTrackPoint] = []
     private var currentElement: String = ""
-    private var currentLocation: Location?
+    private var currentTrackPoint: GPXTrackPoint?
     private var temporaryCoordinate: CLLocationCoordinate2D?
     
     // MARK: - Functions
-    func parsed(at url: URL) throws -> [Location] {
+    func parsed(at url: URL) throws -> [GPXTrackPoint] {
         guard let xmlParser = XMLParser(contentsOf: url) else {
             throw ParsingError.unableToCreateXMLParser
         }
@@ -28,7 +28,7 @@ final class GPXParser: NSObject, XMLParserDelegate {
             throw ParsingError.failedToParseGPXFile
         }
         
-        return locations
+        return trackPoints
     }
     
     // MARK: - Delegate Methods
@@ -67,7 +67,7 @@ final class GPXParser: NSObject, XMLParserDelegate {
         
         guard let temporaryCoordinate else { return }
         
-        currentLocation = Location(
+        currentTrackPoint = GPXTrackPoint(
             coordinate: temporaryCoordinate,
             elevation: elevation
         )
@@ -82,9 +82,9 @@ final class GPXParser: NSObject, XMLParserDelegate {
     ) {
         guard elementName == "trkpt" else { return }
         
-        guard let currentLocation else { return }
+        guard let currentTrackPoint else { return }
         
-        locations.append(currentLocation)
+        trackPoints.append(currentTrackPoint)
     }
 }
 
