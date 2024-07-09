@@ -212,11 +212,11 @@
 		A86508C72C3B4B750091EE0D /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
 				A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */,
 				A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */,
 				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
 				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
-				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
 				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
 				A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */,
 			);

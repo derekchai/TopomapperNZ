@@ -24,7 +24,6 @@ struct RoutesScene: View {
                     preferredColumn: $preferredColumn,
                     route: selectedRoute
                 )
-                    .navigationTitle(selectedRoute.name)
             } else {
                 Text("Select a Route")
             }
