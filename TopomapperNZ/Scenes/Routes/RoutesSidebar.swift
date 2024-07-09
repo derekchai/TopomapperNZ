@@ -11,9 +11,9 @@ import SwiftData
 struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
-    @State private var viewModel = ViewModel()
+    @State internal var isPresentingNewRouteSheet = false
     
-    @Query private var routes: [Route]
+    @Query internal var routes: [Route]
     
     var body: some View {
         NavigationStack {
@@ -25,11 +25,11 @@ struct RoutesSidebar: View {
             .navigationTitle("My Routes")
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("New Route", action: viewModel.presentNewRouteSheet)
+                    Button("New Route", action: presentNewRouteSheet)
                 }
             }
         }
-        .sheet(isPresented: $viewModel.isPresentingNewRouteSheet) {
+        .sheet(isPresented: $isPresentingNewRouteSheet) {
             NewRouteSheet()
         }
     }

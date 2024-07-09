@@ -25,7 +25,6 @@
 		A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508D82C3B695C0091EE0D /* RoutePoint.swift */; };
 		A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DA2C3B6A8B0091EE0D /* GPXTrackPoint.swift */; };
 		A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */; };
-		A86508E02C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DF2C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift */; };
 		A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508E12C3B8C630091EE0D /* GPXParser.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
@@ -36,6 +35,7 @@
 		A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */; };
 		A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */; };
 		A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */; };
+		A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,6 @@
 		A86508D82C3B695C0091EE0D /* RoutePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePoint.swift; sourceTree = "<group>"; };
 		A86508DA2C3B6A8B0091EE0D /* GPXTrackPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXTrackPoint.swift; sourceTree = "<group>"; };
 		A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
-		A86508DF2C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesSidebarViewModel.swift; sourceTree = "<group>"; };
 		A86508E12C3B8C630091EE0D /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Initializers.swift"; sourceTree = "<group>"; };
 		A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Distance.swift"; sourceTree = "<group>"; };
 		A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GPXTrackPoint+Distance.swift"; sourceTree = "<group>"; };
+		A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutesSidebar+Actions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -218,7 +218,7 @@
 				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
 				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
-				A86508DF2C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift */,
+				A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -401,6 +401,7 @@
 				A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */,
+				A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */,
 				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */,
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
@@ -409,7 +410,6 @@
 				A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
-				A86508E02C3B6FEF0091EE0D /* RoutesSidebarViewModel.swift in Sources */,
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
