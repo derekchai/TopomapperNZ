@@ -19,7 +19,8 @@ extension [RoutePoint] {
         for location in locations {
             guard let previousLocation else {
                 let routePoint = RoutePoint(
-                    location: location,
+                    coordinate: location.coordinate,
+                    elevation: location.elevation,
                     distanceFromStart: 0,
                     grade: 0
                 )
@@ -45,7 +46,8 @@ extension [RoutePoint] {
             }
             
             let routePoint = RoutePoint(
-                location: location,
+                coordinate: location.coordinate,
+                elevation: location.elevation,
                 distanceFromStart: distanceFromStart,
                 grade: grade
             )
