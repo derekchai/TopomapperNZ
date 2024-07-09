@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension Route {
+    func rename(to newName: String) {
+        self.name = newName
+    }
+}

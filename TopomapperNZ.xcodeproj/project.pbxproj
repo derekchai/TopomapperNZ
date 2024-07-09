@@ -37,6 +37,7 @@
 		A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */; };
 		A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */; };
 		A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */; };
+		A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GPXTrackPoint+Distance.swift"; sourceTree = "<group>"; };
 		A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutesSidebar+Actions.swift"; sourceTree = "<group>"; };
 		A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouteSheet.swift; sourceTree = "<group>"; };
+		A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Rename.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -253,6 +255,7 @@
 				A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */,
 				A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */,
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
+				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
+				A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
 				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
 				A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */,
