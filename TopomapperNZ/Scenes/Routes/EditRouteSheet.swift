@@ -44,9 +44,10 @@ struct EditRouteSheet: View {
 // MARK: - Actions
 extension EditRouteSheet {
     /// Updates the `Route` being edited's properties to the new provided
-    /// properties.
+    /// properties, and then dismisses the sheet.
     internal func updateRoute() {
         route.rename(to: routeName)
+        dismiss()
     }
     
     /// Cancel editing the `Route` and dismiss the sheet.
