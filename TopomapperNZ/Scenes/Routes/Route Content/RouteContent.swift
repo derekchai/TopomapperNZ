@@ -41,19 +41,21 @@ struct RouteContent: View {
                         Statistic(
                             label: "Length",
                             systemImageName: Symbol.distance,
-                            value: "38.0 km"
+                            value: route.length.formatted(.routeLength)
                         )
                         Divider()
                         Statistic(
                             label: "Alt. Gain",
                             systemImageName: Symbol.elevationGain,
-                            value: "1,432 m"
+                            value: route.cumulativeElevationGain
+                                .formatted(.elevation)
                         )
                         Divider()
                         Statistic(
                             label: "Alt. Loss",
                             systemImageName: Symbol.elevationLoss,
-                            value: "435 m"
+                            value: route.cumulativeElevationLoss
+                                .formatted(.elevation)
                         )
                     }
                     
