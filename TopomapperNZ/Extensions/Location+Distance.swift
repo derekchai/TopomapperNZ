@@ -10,6 +10,16 @@ import CoreLocation
 
 extension Location {
     func distance(from location: Location) -> CLLocationDistance {
-        return self.coordinate.distance(from: location.coordinate)
+        let clLocation1 = CLLocation(
+            latitude: self.coordinate.latitude,
+            longitude: self.coordinate.longitude
+        )
+        
+        let clLocation2 = CLLocation(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude
+        )
+        
+        return clLocation2.distance(from: clLocation1)
     }
 }
