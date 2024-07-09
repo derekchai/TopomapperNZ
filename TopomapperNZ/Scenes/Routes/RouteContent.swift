@@ -11,7 +11,9 @@ import Charts
 
 struct RouteContent: View {
     @Binding var preferredColumn: NavigationSplitViewColumn
-    var route: Route
+    let route: Route
+    
+    @State internal var isPresentingEditRouteSheet = false
     
     var body: some View {
         NavigationStack {
@@ -86,8 +88,11 @@ struct RouteContent: View {
             .navigationTitle(route.name)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Edit") { }
+                    Button("Edit", action: presentEditRouteSheet)
                 }
+            }
+            .sheet(isPresented: $isPresentingEditRouteSheet) {
+                EditRouteSheet(route: route)
             }
         } // NavigationStack
     }
@@ -95,8 +100,12 @@ struct RouteContent: View {
 
 // MARK: - Actions
 extension RouteContent {
-    private func showDetailColumn() {
+    internal func showDetailColumn() {
         preferredColumn = .detail
+    }
+    
+    internal func presentEditRouteSheet() {
+        isPresentingEditRouteSheet = true
     }
 }
 
