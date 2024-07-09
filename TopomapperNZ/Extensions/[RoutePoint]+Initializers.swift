@@ -17,7 +17,7 @@ extension [RoutePoint] {
         var output: [RoutePoint] = []
         
         for trackPoint in gpxTrackPoints {
-            guard let previousTrackPoint else {
+            guard previousTrackPoint != nil else {
                 let routePoint = RoutePoint(
                     coordinate: trackPoint.coordinate,
                     elevation: trackPoint.elevation,
@@ -32,8 +32,11 @@ extension [RoutePoint] {
                 continue
             }
             
-            let distanceFromPreviousTrackPoint = trackPoint.distance(from: previousTrackPoint)
-            let elevationChangeFromPreviousTrackPoint = trackPoint.elevation - previousTrackPoint.elevation
+            let distanceFromPreviousTrackPoint = trackPoint.distance(
+                from: previousTrackPoint!
+            )
+            
+            let elevationChangeFromPreviousTrackPoint = trackPoint.elevation - previousTrackPoint!.elevation
             
             distanceFromStart += distanceFromPreviousTrackPoint
             
@@ -53,6 +56,8 @@ extension [RoutePoint] {
             )
             
             output.append(routePoint)
+            
+            previousTrackPoint = trackPoint
         }
         
         self.init(output)
