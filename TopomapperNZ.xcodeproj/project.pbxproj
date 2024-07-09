@@ -38,6 +38,7 @@
 		A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */; };
 		A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */; };
 		A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */; };
+		A8D686652C3D398000B725F6 /* Route+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686642C3D398000B725F6 /* Route+Metrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutesSidebar+Actions.swift"; sourceTree = "<group>"; };
 		A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRouteSheet.swift; sourceTree = "<group>"; };
 		A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Rename.swift"; sourceTree = "<group>"; };
+		A8D686642C3D398000B725F6 /* Route+Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Metrics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -251,6 +253,7 @@
 				A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */,
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
 				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
+				A8D686642C3D398000B725F6 /* Route+Metrics.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */,
 				A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */,
 				A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */,
+				A8D686652C3D398000B725F6 /* Route+Metrics.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */,
 				A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */,
