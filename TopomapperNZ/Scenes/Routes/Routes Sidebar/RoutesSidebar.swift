@@ -12,15 +12,19 @@ struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State internal var isPresentingNewRouteSheet = false
-    
+
+    @Environment(\.modelContext) internal var modelContext
     @Query internal var routes: [Route]
     
     var body: some View {
         NavigationStack {
-            List(routes, id: \.self, selection: $selectedRoute) { route in
-                NavigationLink(value: route) {
-                    RouteListItem(route: route)
+            List(selection: $selectedRoute) {
+                ForEach(routes) { route in
+                    NavigationLink(value: route) {
+                        RouteListItem(route: route)
+                    }
                 }
+                .onDelete(perform: removeRoutes)
             }
             .navigationTitle("My Routes")
             .toolbar {

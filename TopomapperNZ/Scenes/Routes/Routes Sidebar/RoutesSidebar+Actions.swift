@@ -8,9 +8,13 @@
 import Foundation
 
 extension RoutesSidebar {
-    
-    // MARK: - Functions
-    func presentNewRouteSheet() {
+    internal func presentNewRouteSheet() {
         isPresentingNewRouteSheet = true
+    }
+    
+    internal func removeRoutes(at indexSet: IndexSet) {
+        for index in indexSet {
+            modelContext.delete(routes[index])
+        }
     }
 }
