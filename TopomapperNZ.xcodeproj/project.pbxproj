@@ -217,13 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
-				A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */,
-				A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */,
-				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
-				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
-				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
-				A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */,
-				A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */,
+				A8D6865F2C3D1AD400B725F6 /* Routes Sidebar */,
+				A8D6865E2C3D1ABB00B725F6 /* Route Content */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -269,6 +264,27 @@
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
 			);
 			path = "Protocol Conformance";
+			sourceTree = "<group>";
+		};
+		A8D6865E2C3D1ABB00B725F6 /* Route Content */ = {
+			isa = PBXGroup;
+			children = (
+				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
+				A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */,
+			);
+			path = "Route Content";
+			sourceTree = "<group>";
+		};
+		A8D6865F2C3D1AD400B725F6 /* Routes Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A86508CA2C3B4EA40091EE0D /* RoutesSidebar.swift */,
+				A8D686582C3CCD1700B725F6 /* RoutesSidebar+Actions.swift */,
+				A86508CC2C3B4EBD0091EE0D /* RouteListItem.swift */,
+				A8CA0BDC2C3BD5B9007035F7 /* NewRouteSheet.swift */,
+				A8CA0BE02C3BE934007035F7 /* NewRouteSheet+Actions.swift */,
+			);
+			path = "Routes Sidebar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
