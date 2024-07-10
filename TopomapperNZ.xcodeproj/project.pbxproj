@@ -178,7 +178,7 @@
 				A86508942C3B48770091EE0D /* TopomapperNZApp.swift */,
 				A86508DC2C3B6D3D0091EE0D /* Extensions */,
 				A86508CE2C3B54520091EE0D /* Models */,
-				A86508C62C3B4B360091EE0D /* Scenes */,
+				A86508C62C3B4B360091EE0D /* User Interface */,
 				A86508C12C3B4A560091EE0D /* Constants */,
 				A8D686682C3DE0A400B725F6 /* Styles */,
 				A865089A2C3B48790091EE0D /* Assets.xcassets */,
@@ -225,14 +225,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		A86508C62C3B4B360091EE0D /* Scenes */ = {
+		A86508C62C3B4B360091EE0D /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
 				A86508962C3B48770091EE0D /* ContentView.swift */,
 				A86508D52C3B60300091EE0D /* Shared */,
 				A86508C72C3B4B750091EE0D /* Routes */,
 			);
-			path = Scenes;
+			path = "User Interface";
 			sourceTree = "<group>";
 		};
 		A86508C72C3B4B750091EE0D /* Routes */ = {
