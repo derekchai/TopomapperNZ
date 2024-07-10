@@ -45,6 +45,8 @@
 		A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */; };
 		A8D686732C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */; };
 		A8D686752C3E222A00B725F6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8D686742C3E222A00B725F6 /* .gitignore */; };
+		A8D686772C3E229800B725F6 /* TileServerURLTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686762C3E229800B725F6 /* TileServerURLTemplate.swift */; };
+		A8D686792C3E22A600B725F6 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686782C3E22A600B725F6 /* Key.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteMapViewController+MKMapViewDelegateMethods.swift"; sourceTree = "<group>"; };
 		A8D686742C3E222A00B725F6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A8D686762C3E229800B725F6 /* TileServerURLTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileServerURLTemplate.swift; sourceTree = "<group>"; };
+		A8D686782C3E22A600B725F6 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -215,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				A86508C22C3B4A600091EE0D /* Symbol.swift */,
+				A8D686762C3E229800B725F6 /* TileServerURLTemplate.swift */,
+				A8D686782C3E22A600B725F6 /* Key.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */,
 				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */,
+				A8D686772C3E229800B725F6 /* TileServerURLTemplate.swift in Sources */,
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
 				A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */,
@@ -479,6 +486,7 @@
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
+				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
 				A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */,

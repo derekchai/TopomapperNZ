@@ -12,6 +12,7 @@ class RouteMapViewController: UIViewController {
     let route: Route
     
     private let mapView = MKMapView()
+    private let topo50Overlay = MKTileOverlay(urlTemplate: TileServerURLTemplate.topo50)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,11 @@ class RouteMapViewController: UIViewController {
         
         mapView.showsCompass = true
         mapView.showsScale = true
+        mapView.overrideUserInterfaceStyle = .light
+        
+        topo50Overlay.canReplaceMapContent = false
+        
+        mapView.addOverlay(topo50Overlay, level: .aboveRoads)
 
         self.view = mapView
     }

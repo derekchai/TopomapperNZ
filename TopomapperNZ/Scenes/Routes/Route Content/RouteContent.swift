@@ -23,7 +23,6 @@ struct RouteContent: View {
                 Text("Map")
                     .font(.headline)
                 
-//                Map(interactionModes: []) {}
                 RouteMapViewControllerRepresentable(route: route)
                     .frame(height: 350)
                     .onTapGesture(perform: showDetailColumn)
