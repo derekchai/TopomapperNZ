@@ -21,6 +21,15 @@ class StartEndAnnotationView: MKAnnotationView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    convenience init(from startEndAnnotation: StartEndAnnotation, reuseIdentifier: String?) {
+        self.init(
+            annotation: startEndAnnotation,
+            reuseIdentifier: reuseIdentifier
+        )
+        
+        canShowCallout = false
+    }
+    
     // MARK: - Property Overrides
     override var annotation: (any MKAnnotation)? {
         didSet {
