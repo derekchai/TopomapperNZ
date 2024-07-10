@@ -23,7 +23,8 @@ struct RouteContent: View {
                 Text("Map")
                     .font(.headline)
                 
-                Map(interactionModes: []) {}
+//                Map(interactionModes: []) {}
+                RouteMapViewControllerRepresentable(route: route)
                     .frame(height: 350)
                     .onTapGesture(perform: showDetailColumn)
                     .clipShape(RoundedRectangle(cornerRadius: 20))

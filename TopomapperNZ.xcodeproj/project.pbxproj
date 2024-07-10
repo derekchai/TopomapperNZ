@@ -41,6 +41,9 @@
 		A8D686652C3D398000B725F6 /* Route+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686642C3D398000B725F6 /* Route+Metrics.swift */; };
 		A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686692C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift */; };
 		A8D6866C2C3DE26200B725F6 /* ElevationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6866B2C3DE26200B725F6 /* ElevationFormatStyle.swift */; };
+		A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6866D2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift */; };
+		A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */; };
+		A8D686732C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		A8D686642C3D398000B725F6 /* Route+Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Metrics.swift"; sourceTree = "<group>"; };
 		A8D686692C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteLengthFormatStyle.swift; sourceTree = "<group>"; };
 		A8D6866B2C3DE26200B725F6 /* ElevationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevationFormatStyle.swift; sourceTree = "<group>"; };
+		A8D6866D2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
+		A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteMapViewController+MKMapViewDelegateMethods.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -245,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508D62C3B60360091EE0D /* Statistic.swift */,
+				A8D6866F2C3E1DEF00B725F6 /* Route Map */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -302,6 +309,16 @@
 				A8D6866B2C3DE26200B725F6 /* ElevationFormatStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		A8D6866F2C3E1DEF00B725F6 /* Route Map */ = {
+			isa = PBXGroup;
+			children = (
+				A8D6866D2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift */,
+				A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */,
+				A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */,
+			);
+			path = "Route Map";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,10 +453,12 @@
 			files = (
 				A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */,
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
+				A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */,
 				A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */,
 				A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */,
 				A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */,
 				A8D686652C3D398000B725F6 /* Route+Metrics.swift in Sources */,
+				A8D686732C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift in Sources */,
 				A8D6866C2C3DE26200B725F6 /* ElevationFormatStyle.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */,
@@ -449,6 +468,7 @@
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
 				A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */,
+				A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */,
 				A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
