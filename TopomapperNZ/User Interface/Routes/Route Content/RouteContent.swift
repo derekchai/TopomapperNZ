@@ -15,6 +15,8 @@ struct RouteContent: View {
     
     @State internal var isPresentingEditRouteSheet = false
     
+    @State internal var isElevationProfileExpanded = false
+    
     private let mapFrameHeight: CGFloat = 350
     
     var body: some View {
@@ -64,8 +66,21 @@ struct RouteContent: View {
                 }
                 
                 // MARK: - Elevation Profile
-                Text("Elevation Profile")
-                    .header()
+                HStack(alignment: .lastTextBaseline) {
+                    Text("Elevation Profile")
+                        .header()
+                    
+                    Spacer()
+                    
+                    Group {
+                        if isElevationProfileExpanded {
+                            contractedElevationProfileButton
+                        } else {
+                            expandedElevationProfileButton
+                        }
+                    }
+                    .foregroundStyle(.secondary)
+                }
                 
                 Chart {
                     LinePlot(
@@ -82,6 +97,9 @@ struct RouteContent: View {
                     AxisMarks(format: .elevation)
                 }
                 .onTapGesture(perform: showDetailColumn)
+                .if(isElevationProfileExpanded) { view in
+                    view.chartScrollableAxes(.horizontal)
+                }
                 
                 // MARK: - Breakdown by Day
                 Text("Breakdown by Day")
@@ -109,6 +127,25 @@ struct RouteContent: View {
     }
 }
 
+// MARK: - Components
+extension RouteContent {
+    private var expandedElevationProfileButton: some View {
+        Button(
+            "",
+            systemImage: Symbol.expandHorizontal,
+            action: expandElevationProfile
+        )
+    }
+    
+    private var contractedElevationProfileButton: some View {
+        Button(
+            "",
+            systemImage: Symbol.contractHorizontal,
+            action: contractElevationProfile
+        )
+    }
+}
+
 // MARK: - Actions
 extension RouteContent {
     internal func showDetailColumn() {
@@ -117,6 +154,14 @@ extension RouteContent {
     
     internal func presentEditRouteSheet() {
         isPresentingEditRouteSheet = true
+    }
+    
+    internal func expandElevationProfile() {
+        isElevationProfileExpanded = true
+    }
+    
+    internal func contractElevationProfile() {
+        isElevationProfileExpanded = false
     }
 }
 
