@@ -44,6 +44,7 @@
 		A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6866D2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift */; };
 		A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */; };
 		A8D686732C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */; };
+		A8D686752C3E222A00B725F6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8D686742C3E222A00B725F6 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		A8D6866D2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		A8D686702C3E1E2600B725F6 /* RouteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteMapViewController.swift; sourceTree = "<group>"; };
 		A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouteMapViewController+MKMapViewDelegateMethods.swift"; sourceTree = "<group>"; };
+		A8D686742C3E222A00B725F6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -177,6 +179,7 @@
 				A8D686682C3DE0A400B725F6 /* Styles */,
 				A865089A2C3B48790091EE0D /* Assets.xcassets */,
 				A865089C2C3B48790091EE0D /* Preview Content */,
+				A8D686742C3E222A00B725F6 /* .gitignore */,
 			);
 			path = TopomapperNZ;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A865089E2C3B48790091EE0D /* Preview Assets.xcassets in Resources */,
+				A8D686752C3E222A00B725F6 /* .gitignore in Resources */,
 				A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
