@@ -50,6 +50,7 @@
 		A8D6867C2C3E24C900B725F6 /* RoutePathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */; };
 		A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */; };
 		A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */; };
+		A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathPolyline.swift; sourceTree = "<group>"; };
 		A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathOutlinePolyline.swift; sourceTree = "<group>"; };
 		A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Polylines.swift"; sourceTree = "<group>"; };
+		A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508942C3B48770091EE0D /* TopomapperNZApp.swift */,
+				A8D686812C3E297F00B725F6 /* Protocols */,
 				A86508DC2C3B6D3D0091EE0D /* Extensions */,
 				A86508CE2C3B54520091EE0D /* Models */,
 				A86508C62C3B4B360091EE0D /* User Interface */,
@@ -345,6 +348,14 @@
 				A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */,
 			);
 			path = "MapKit Annotations and Overlays";
+			sourceTree = "<group>";
+		};
+		A8D686812C3E297F00B725F6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,6 +522,7 @@
 				A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */,
 				A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
+				A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */,
 				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
 				A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */,
 				A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */,

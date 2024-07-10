@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class RoutePathPolyline: MKPolyline {
+class RoutePathPolyline: MKPolyline, RoutePathRepresentable {
     var renderer: MKPolylineRenderer {
         let renderer = MKPolylineRenderer(polyline: self)
         
