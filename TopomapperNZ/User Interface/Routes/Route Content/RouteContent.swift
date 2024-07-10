@@ -15,6 +15,8 @@ struct RouteContent: View {
     
     @State internal var isPresentingEditRouteSheet = false
     
+    private let mapFrameHeight: CGFloat = 350
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -23,8 +25,11 @@ struct RouteContent: View {
                 Text("Map")
                     .font(.headline)
                 
-                RouteMapViewControllerRepresentable(route: route)
-                    .frame(height: 350)
+                RouteMapViewControllerRepresentable(
+                    route: route,
+                    mapFrameHeight: mapFrameHeight
+                )
+                    .frame(height: mapFrameHeight)
                     .onTapGesture(perform: showDetailColumn)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 

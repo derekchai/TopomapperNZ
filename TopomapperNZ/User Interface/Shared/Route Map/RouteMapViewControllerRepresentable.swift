@@ -11,9 +11,13 @@ import SwiftUI
 
 struct RouteMapViewControllerRepresentable: UIViewControllerRepresentable {
     let route: Route
+    let mapFrameHeight: CGFloat
     
     func makeUIViewController(context: Context) -> RouteMapViewController {
-        RouteMapViewController(route: route)
+        RouteMapViewController(
+            route: route,
+            mapFrameHeight: mapFrameHeight
+        )
     }
 
     func updateUIViewController(
