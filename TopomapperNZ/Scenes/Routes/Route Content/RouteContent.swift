@@ -63,13 +63,19 @@ struct RouteContent: View {
                     .header()
                 
                 Chart {
-                    LinePlot(x: "x", y: "y = sin(x)") { sin($0) }
-                        .foregroundStyle(by: .value("expression", "y=sin(x)"))
-                        .opacity(0.8)
+                    LinePlot(
+                        route.points,
+                        x: .value("Distance from start", \.distanceFromStart),
+                        y: .value("Elevation", \.elevation)
+                    )
                 }
-                .chartXScale(domain: -10 ... 10)
-                .chartYScale(domain: -1 ... 1)
                 .frame(height: 200)
+                .chartXAxis {
+                    AxisMarks(format: .routeLength)
+                }
+                .chartYAxis {
+                    AxisMarks(format: .elevation)
+                }
                 .onTapGesture(perform: showDetailColumn)
                 
                 // MARK: - Breakdown by Day
