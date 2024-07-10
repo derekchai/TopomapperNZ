@@ -10,7 +10,7 @@ import MapKit
 
 extension Route {
     /// Returns the `MKPolyline` created from the points of this `Route`.
-    var polylines: (RoutePathPolyline, RoutePathOutlinePolyline) {
+    var polylines: [any RoutePathRepresentable] {
         let coordinates = self.points.map { $0.coordinate }
         
         let pathPolyline = RoutePathPolyline(
@@ -23,6 +23,6 @@ extension Route {
             count: self.points.count
         )
         
-        return (pathPolyline, outlinePolyline)
+        return [pathPolyline, outlinePolyline]
     }
 }
