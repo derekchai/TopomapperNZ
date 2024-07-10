@@ -51,7 +51,7 @@
 		A8D686792C3E22A600B725F6 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686782C3E22A600B725F6 /* Key.swift */; };
 		A8D6867C2C3E24C900B725F6 /* RoutePathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */; };
 		A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */; };
-		A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */; };
+		A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867F2C3E26AA00B725F6 /* Route+Annotations&Overlays.swift */; };
 		A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */; };
 		A8D686852C3E2F4600B725F6 /* View+ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */; };
 		A8D686872C3E3CE800B725F6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686862C3E3CE800B725F6 /* SectionHeader.swift */; };
@@ -122,7 +122,7 @@
 		A8D686782C3E22A600B725F6 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathPolyline.swift; sourceTree = "<group>"; };
 		A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathOutlinePolyline.swift; sourceTree = "<group>"; };
-		A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Polylines.swift"; sourceTree = "<group>"; };
+		A8D6867F2C3E26AA00B725F6 /* Route+Annotations&Overlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Annotations&Overlays.swift"; sourceTree = "<group>"; };
 		A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathRepresentable.swift; sourceTree = "<group>"; };
 		A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalViewModifier.swift"; sourceTree = "<group>"; };
 		A8D686862C3E3CE800B725F6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
 				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
 				A8D686642C3D398000B725F6 /* Route+Metrics.swift */,
-				A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */,
+				A8D6867F2C3E26AA00B725F6 /* Route+Annotations&Overlays.swift */,
 				A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */,
 			);
 			path = Extensions;
@@ -527,7 +527,7 @@
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
-				A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */,
+				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,
 				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,
