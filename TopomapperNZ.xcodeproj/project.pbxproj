@@ -52,6 +52,7 @@
 		A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */; };
 		A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */; };
 		A8D686852C3E2F4600B725F6 /* View+ConditionalViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */; };
+		A8D686872C3E3CE800B725F6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686862C3E3CE800B725F6 /* SectionHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +121,7 @@
 		A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Polylines.swift"; sourceTree = "<group>"; };
 		A8D686822C3E298B00B725F6 /* RoutePathRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathRepresentable.swift; sourceTree = "<group>"; };
 		A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ConditionalViewModifier.swift"; sourceTree = "<group>"; };
+		A8D686862C3E3CE800B725F6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -308,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
+				A8D686862C3E3CE800B725F6 /* SectionHeader.swift */,
 				A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */,
 			);
 			path = "Route Content";
@@ -504,6 +507,7 @@
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */,
 				A8D686592C3CCD1700B725F6 /* RoutesSidebar+Actions.swift in Sources */,
+				A8D686872C3E3CE800B725F6 /* SectionHeader.swift in Sources */,
 				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */,
 				A8D686772C3E229800B725F6 /* TileServerURLTemplate.swift in Sources */,
