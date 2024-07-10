@@ -30,7 +30,11 @@ struct RoutesScene: View {
             
         // MARK: - Detail
         } detail: {
-            Text("Detail")
+            if let selectedRoute {
+                Text("\(selectedRoute.name) detail")
+            } else {
+                Text("Select a Route")
+            }
         }
         .searchable(text: .constant(""), prompt: "Search Routes")
     }
