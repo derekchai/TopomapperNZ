@@ -79,7 +79,6 @@ struct RouteContent: View {
                             expandedElevationProfileButton
                         }
                     }
-                    .foregroundStyle(.secondary)
                 }
                 
                 Chart {
