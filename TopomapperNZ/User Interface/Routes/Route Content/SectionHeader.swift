@@ -10,7 +10,19 @@ import SwiftUI
 struct SectionHeader<Content: View>: View {
     let title: String
     @ViewBuilder var actions: () -> Content
+    
+    // MARK: - Initializer
+    init(
+        title: String,
+        @ViewBuilder actions: @escaping () -> Content = {
+            EmptyView()
+        }
+    ) {
+        self.title = title
+        self.actions = actions
+    }
 
+    // MARK: - Body
     var body: some View {
         HStack {
             Text(title)
