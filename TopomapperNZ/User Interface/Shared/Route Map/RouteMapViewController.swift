@@ -54,6 +54,11 @@ class RouteMapViewController: UIViewController {
                 edgePadding: .init(top: 20, left: 20, bottom: 20, right: 20),
                 animated: true
             )
+        
+        // Start/end annotations
+        for annotation in route.startEndAnnotation {
+            mapView.addAnnotation(annotation)
+        }
 
         self.view = mapView
     }
