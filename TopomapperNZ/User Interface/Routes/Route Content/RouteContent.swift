@@ -24,8 +24,7 @@ struct RouteContent: View {
             VStack(alignment: .leading) {
                 
                 // MARK: - Map
-                Text("Map")
-                    .font(.headline)
+                SectionHeader(title: "Route Map")
                 
                 RouteMapViewControllerRepresentable(
                     route: route,
@@ -40,8 +39,8 @@ struct RouteContent: View {
                     .foregroundStyle(.secondary)
                 
                 // MARK: - Statistics
-                Text("Statistics")
-                    .header()
+                SectionHeader(title: "Statistics")
+                    .padding(.top)
                 
                 HStack {
                     Statistic(
@@ -66,20 +65,14 @@ struct RouteContent: View {
                 }
                 
                 // MARK: - Elevation Profile
-                HStack(alignment: .lastTextBaseline) {
-                    Text("Elevation Profile")
-                        .header()
-                    
-                    Spacer()
-                    
-                    Group {
-                        if isElevationProfileExpanded {
-                            contractedElevationProfileButton
-                        } else {
-                            expandedElevationProfileButton
-                        }
+                SectionHeader(title: "Elevation Profile") {
+                    if isElevationProfileExpanded {
+                        contractedElevationProfileButton
+                    } else {
+                        expandedElevationProfileButton
                     }
                 }
+                .padding(.top)
                 
                 Chart {
                     LinePlot(
@@ -101,8 +94,8 @@ struct RouteContent: View {
                 }
                 
                 // MARK: - Breakdown by Day
-                Text("Breakdown by Day")
-                    .header()
+                SectionHeader(title: "Breakdown by Day")
+                    .padding(.top)
                 
                 Text("Day 1")
                     .font(.subheadline)
@@ -161,19 +154,6 @@ extension RouteContent {
     
     internal func contractElevationProfile() {
         isElevationProfileExpanded = false
-    }
-}
-
-// MARK: - View Extensions
-/// The amount of padding above each section's header (excluding the first
-/// section).
-fileprivate let sectionPadding: CGFloat = 25
-
-fileprivate extension View {
-    func header() -> some View {
-        self
-            .font(.headline)
-            .padding(.top, sectionPadding)
     }
 }
 
