@@ -26,6 +26,8 @@
 		A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DA2C3B6A8B0091EE0D /* GPXTrackPoint.swift */; };
 		A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */; };
 		A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508E12C3B8C630091EE0D /* GPXParser.swift */; };
+		A8A053B22C3E8A72002DB74E /* StartEndAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */; };
+		A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -95,6 +97,8 @@
 		A86508DA2C3B6A8B0091EE0D /* GPXTrackPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXTrackPoint.swift; sourceTree = "<group>"; };
 		A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Codable.swift"; sourceTree = "<group>"; };
 		A86508E12C3B8C630091EE0D /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
+		A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndAnnotation.swift; sourceTree = "<group>"; };
+		A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndAnnotationView.swift; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 			children = (
 				A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */,
 				A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */,
+				A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */,
+				A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */,
 			);
 			path = "MapKit Annotations and Overlays";
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
 				A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
+				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,
 				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
@@ -530,6 +537,7 @@
 				A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
 				A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */,
+				A8A053B22C3E8A72002DB74E /* StartEndAnnotation.swift in Sources */,
 				A8D686852C3E2F4600B725F6 /* View+ConditionalViewModifier.swift in Sources */,
 				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
 				A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */,
