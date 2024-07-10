@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import MapKit
 
-protocol RoutePathRepresentable {
+protocol RoutePathRepresentable: MKOverlay {
     
 }
