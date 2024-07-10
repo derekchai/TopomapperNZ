@@ -9,7 +9,8 @@ import Foundation
 import MapKit
 
 extension Route {
-    /// Returns the `MKPolyline` created from the points of this `Route`.
+    /// Returns the main and outline polylines created from the points of this
+    /// `Route`.
     var polylines: [any RoutePathRepresentable] {
         let coordinates = self.points.map { $0.coordinate }
         
@@ -23,6 +24,6 @@ extension Route {
             count: self.points.count
         )
         
-        return [pathPolyline, outlinePolyline]
+        return [outlinePolyline, pathPolyline]
     }
 }

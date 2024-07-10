@@ -30,9 +30,14 @@ class RouteMapViewController: UIViewController {
         mapView.showsScale = true
         mapView.overrideUserInterfaceStyle = .light
         
+        // Topo50 overlay
         topo50Overlay.canReplaceMapContent = false
-        
         mapView.addOverlay(topo50Overlay, level: .aboveRoads)
+        
+        // Polyline overlays
+        for polyline in route.polylines {
+            mapView.addOverlay(polyline)
+        }
 
         self.view = mapView
     }
