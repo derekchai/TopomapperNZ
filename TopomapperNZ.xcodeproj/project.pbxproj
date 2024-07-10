@@ -47,6 +47,9 @@
 		A8D686752C3E222A00B725F6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A8D686742C3E222A00B725F6 /* .gitignore */; };
 		A8D686772C3E229800B725F6 /* TileServerURLTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686762C3E229800B725F6 /* TileServerURLTemplate.swift */; };
 		A8D686792C3E22A600B725F6 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D686782C3E22A600B725F6 /* Key.swift */; };
+		A8D6867C2C3E24C900B725F6 /* RoutePathPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */; };
+		A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */; };
+		A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		A8D686742C3E222A00B725F6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A8D686762C3E229800B725F6 /* TileServerURLTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileServerURLTemplate.swift; sourceTree = "<group>"; };
 		A8D686782C3E22A600B725F6 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathPolyline.swift; sourceTree = "<group>"; };
+		A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathOutlinePolyline.swift; sourceTree = "<group>"; };
+		A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Polylines.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -260,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508D62C3B60360091EE0D /* Statistic.swift */,
+				A8D6867A2C3E249600B725F6 /* MapKit Annotations and Overlays */,
 				A8D6866F2C3E1DEF00B725F6 /* Route Map */,
 			);
 			path = Shared;
@@ -275,6 +282,7 @@
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
 				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
 				A8D686642C3D398000B725F6 /* Route+Metrics.swift */,
+				A8D6867F2C3E26AA00B725F6 /* Route+Polylines.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -328,6 +336,15 @@
 				A8D686722C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift */,
 			);
 			path = "Route Map";
+			sourceTree = "<group>";
+		};
+		A8D6867A2C3E249600B725F6 /* MapKit Annotations and Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				A8D6867B2C3E24C900B725F6 /* RoutePathPolyline.swift */,
+				A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */,
+			);
+			path = "MapKit Annotations and Overlays";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +493,7 @@
 				A86508CD2C3B4EBD0091EE0D /* RouteListItem.swift in Sources */,
 				A8CA0BEC2C3BFA44007035F7 /* CLLocation+Initializers.swift in Sources */,
 				A8D686772C3E229800B725F6 /* TileServerURLTemplate.swift in Sources */,
+				A8D6867C2C3E24C900B725F6 /* RoutePathPolyline.swift in Sources */,
 				A86508972C3B48770091EE0D /* ContentView.swift in Sources */,
 				A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */,
@@ -485,6 +503,7 @@
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
+				A8D686802C3E26AA00B725F6 /* Route+Polylines.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
@@ -493,6 +512,7 @@
 				A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
 				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
+				A8D6867E2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift in Sources */,
 				A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */,
 				A86508D22C3B55530091EE0D /* Route+SampleData.swift in Sources */,
 			);

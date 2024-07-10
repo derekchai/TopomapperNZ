@@ -1,5 +1,5 @@
 //
-//  Route+Polyline.swift
+//  Route+Polylines.swift
 //  TopomapperNZ
 //
 //  Created by Derek Chai on 10/07/2024.
@@ -10,12 +10,19 @@ import MapKit
 
 extension Route {
     /// Returns the `MKPolyline` created from the points of this `Route`.
-    var polyline: MKPolyline {
+    var polylines: (RoutePathPolyline, RoutePathOutlinePolyline) {
         let coordinates = self.points.map { $0.coordinate }
         
-        return MKPolyline(
+        let pathPolyline = RoutePathPolyline(
             coordinates: coordinates,
             count: self.points.count
         )
+        
+        let outlinePolyline = RoutePathOutlinePolyline(
+            coordinates: coordinates,
+            count: self.points.count
+        )
+        
+        return (pathPolyline, outlinePolyline)
     }
 }
