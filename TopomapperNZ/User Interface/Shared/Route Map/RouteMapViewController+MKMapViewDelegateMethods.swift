@@ -24,4 +24,19 @@ extension RouteMapViewController: MKMapViewDelegate {
             fatalError("Unhandled overlay type: \(overlay).")
         }
     }
+    
+    func mapView(
+        _ mapView: MKMapView,
+        viewFor annotation: any MKAnnotation
+    ) -> MKAnnotationView? {
+        switch annotation {
+        case let startEndAnnotation as StartEndAnnotation:
+            return StartEndAnnotationView(
+                annotation: annotation,
+                reuseIdentifier: nil
+            )
+        default:
+            fatalError("Unhandled annotation type: \(annotation).")
+        }
+    }
 }
