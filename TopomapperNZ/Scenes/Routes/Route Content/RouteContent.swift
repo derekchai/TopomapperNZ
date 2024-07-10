@@ -16,87 +16,85 @@ struct RouteContent: View {
     @State internal var isPresentingEditRouteSheet = false
     
     var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    
-                    // MARK: - Map
-                    Text("Map")
-                        .font(.headline)
-                    
-                    Map(interactionModes: []) {}
-                        .frame(height: 350)
-                        .onTapGesture(perform: showDetailColumn)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
-                    
-                    Text("Created on \(route.creationDate.formatted())")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                    
-                    // MARK: - Statistics
-                    Text("Statistics")
-                        .header()
-                    
-                    HStack {
-                        Statistic(
-                            label: "Length",
-                            systemImageName: Symbol.distance,
-                            value: route.length.formatted(.routeLength)
-                        )
-                        Divider()
-                        Statistic(
-                            label: "Alt. Gain",
-                            systemImageName: Symbol.elevationGain,
-                            value: route.cumulativeElevationGain
-                                .formatted(.elevation)
-                        )
-                        Divider()
-                        Statistic(
-                            label: "Alt. Loss",
-                            systemImageName: Symbol.elevationLoss,
-                            value: route.cumulativeElevationLoss
-                                .formatted(.elevation)
-                        )
-                    }
-                    
-                    // MARK: - Elevation Profile
-                    Text("Elevation Profile")
-                        .header()
-                    
-                    Chart {
-                        LinePlot(x: "x", y: "y = sin(x)") { sin($0) }
-                            .foregroundStyle(by: .value("expression", "y=sin(x)"))
-                            .opacity(0.8)
-                    }
-                    .chartXScale(domain: -10 ... 10)
-                    .chartYScale(domain: -1 ... 1)
-                    .frame(height: 200)
+        ScrollView {
+            VStack(alignment: .leading) {
+                
+                // MARK: - Map
+                Text("Map")
+                    .font(.headline)
+                
+                Map(interactionModes: []) {}
+                    .frame(height: 350)
                     .onTapGesture(perform: showDetailColumn)
-                    
-                    // MARK: - Breakdown by Day
-                    Text("Breakdown by Day")
-                        .header()
-                    
-                    Text("Day 1")
-                        .font(.subheadline)
-                    Text("Day 2")
-                        .font(.subheadline)
-                    Text("Day 3")
-                        .font(.subheadline)
-                    
-                } // VStack
-                .padding()
-            } // ScrollView
-            .navigationTitle(route.name)
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Button("Edit", action: presentEditRouteSheet)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                Text("Created on \(route.creationDate.formatted())")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                
+                // MARK: - Statistics
+                Text("Statistics")
+                    .header()
+                
+                HStack {
+                    Statistic(
+                        label: "Length",
+                        systemImageName: Symbol.distance,
+                        value: route.length.formatted(.routeLength)
+                    )
+                    Divider()
+                    Statistic(
+                        label: "Alt. Gain",
+                        systemImageName: Symbol.elevationGain,
+                        value: route.cumulativeElevationGain
+                            .formatted(.elevation)
+                    )
+                    Divider()
+                    Statistic(
+                        label: "Alt. Loss",
+                        systemImageName: Symbol.elevationLoss,
+                        value: route.cumulativeElevationLoss
+                            .formatted(.elevation)
+                    )
                 }
+                
+                // MARK: - Elevation Profile
+                Text("Elevation Profile")
+                    .header()
+                
+                Chart {
+                    LinePlot(x: "x", y: "y = sin(x)") { sin($0) }
+                        .foregroundStyle(by: .value("expression", "y=sin(x)"))
+                        .opacity(0.8)
+                }
+                .chartXScale(domain: -10 ... 10)
+                .chartYScale(domain: -1 ... 1)
+                .frame(height: 200)
+                .onTapGesture(perform: showDetailColumn)
+                
+                // MARK: - Breakdown by Day
+                Text("Breakdown by Day")
+                    .header()
+                
+                Text("Day 1")
+                    .font(.subheadline)
+                Text("Day 2")
+                    .font(.subheadline)
+                Text("Day 3")
+                    .font(.subheadline)
+                
+            } // VStack
+            .padding()
+        } // ScrollView
+        .navigationTitle(route.name)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Edit", action: presentEditRouteSheet)
             }
-            .sheet(isPresented: $isPresentingEditRouteSheet) {
-                EditRouteSheet(route: route)
-            }
-        } // NavigationStack
+        }
+        .sheet(isPresented: $isPresentingEditRouteSheet) {
+            EditRouteSheet(route: route)
+        }
     }
 }
 
