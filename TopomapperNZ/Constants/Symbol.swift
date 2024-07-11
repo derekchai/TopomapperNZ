@@ -18,4 +18,5 @@ enum Symbol {
     static let contractHorizontal = "arrow.right.and.line.vertical.and.arrow.left"
     static let startPoint = "a.circle.fill"
     static let endPoint = "b.circle.fill"
+    static let sortBy = "arrow.up.arrow.down"
 }
