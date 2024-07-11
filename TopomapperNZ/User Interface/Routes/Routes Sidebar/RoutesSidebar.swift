@@ -10,19 +10,31 @@ import SwiftData
 
 struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
+    @Binding var searchText: String
     
     @State internal var isPresentingNewRouteSheet = false
     
     @Environment(\.modelContext) internal var modelContext
     @Query internal var routes: [Route]
     
+    // MARK: - Computed Properties
+    private var displayedRoutes: [Route] {
+        guard !searchText.isEmpty else { return routes }
+        
+        return routes.filter { route in
+            route.name.localizedCaseInsensitiveContains(searchText)
+        }
+    }
+    
     // MARK: - Initializer
     init(
         selectedRoute: Binding<Route?>,
+        searchText: Binding<String>,
         routeSortMode: Route.SortMode,
         routeSortOrder: Route.SortOrder
     ) {
         _selectedRoute = selectedRoute
+        _searchText = searchText
         
         switch routeSortMode {
         case .name:
@@ -47,7 +59,7 @@ struct RoutesSidebar: View {
                 )
             } else {
                 List(selection: $selectedRoute) {
-                    ForEach(routes) { route in
+                    ForEach(displayedRoutes) { route in
                         NavigationLink(value: route) {
                             RouteListItem(route: route)
                         }

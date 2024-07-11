@@ -10,6 +10,7 @@ import SwiftUI
 struct RoutesScene: View {
     @State private var selectedRoute: Route? = nil
     @State private var preferredColumn = NavigationSplitViewColumn.sidebar
+    @State private var searchText = ""
     
     @State private var sortMode: Route.SortMode = .creationDate
     @State private var sortOrder: Route.SortOrder = .forward
@@ -19,7 +20,8 @@ struct RoutesScene: View {
         // MARK: - Sidebar
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
             RoutesSidebar(
-                selectedRoute: $selectedRoute,
+                selectedRoute: $selectedRoute, 
+                searchText: $searchText,
                 routeSortMode: sortMode,
                 routeSortOrder: sortOrder
             )
@@ -60,7 +62,7 @@ struct RoutesScene: View {
                 Text("Select a Route")
             }
         }
-        .searchable(text: .constant(""), prompt: "Search Routes")
+        .searchable(text: $searchText, prompt: "Search Routes")
     }
 }
 
