@@ -13,6 +13,16 @@ struct RouteListItem: View {
     
     var body: some View {
         HStack {
+            RoutePathShape(route: route)
+                .stroke(
+                    style: StrokeStyle(
+                        lineWidth: 2,
+                        lineCap: .round,
+                        lineJoin: .round
+                    )
+                )
+                .frame(width: 60, height: 60)
+            
             VStack(alignment: .leading) {
                 Text(route.name)
                     .font(.headline)
