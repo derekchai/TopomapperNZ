@@ -17,20 +17,24 @@ struct RouteListItem: View {
                 Text(route.name)
                     .font(.headline)
                 
-                Text(route.creationDate.formatted())
-                    .font(.subheadline)
-                
                 HStack {
-                    Text("\(route.length.formatted(.routeLength))")
-                    Image(systemName: Symbol.distance)
-                    
-                    Text(
-                        "\(route.cumulativeElevationGain.formatted(.elevation))"
+                    Statistic(
+                        label: "Length",
+                        systemImageName: Symbol.distance,
+                        value: route.length.formatted(.routeLength)
                     )
-                    Image(systemName: Symbol.elevationGain)
+                    
+                    Statistic(
+                        label: "Alt. Gain",
+                        systemImageName: Symbol.elevationGain,
+                        value: route.cumulativeElevationGain
+                            .formatted(.elevation)
+                    )
                 }
-                .font(.caption)
-                .foregroundStyle(.secondary)
+                
+                Text(route.creationDate.formatted())
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
             }
         }
     }
