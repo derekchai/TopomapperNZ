@@ -38,7 +38,7 @@ extension RouteMapViewController: MKMapViewDelegate {
         switch annotation {
         case let startEndAnnotation as StartEndAnnotation:
             return StartEndAnnotationView(
-                annotation: annotation,
+                annotation: startEndAnnotation,
                 reuseIdentifier: identifier
             )
         default:
