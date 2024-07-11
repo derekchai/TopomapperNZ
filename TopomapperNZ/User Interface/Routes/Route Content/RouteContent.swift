@@ -24,19 +24,21 @@ struct RouteContent: View {
             VStack(alignment: .leading) {
                 
                 // MARK: - Map
+#if os(iOS)
                 SectionHeader(title: "Route Map")
                 
                 RouteMapViewControllerRepresentable(
                     route: route,
                     mapFrameHeight: mapFrameHeight
                 )
-                    .frame(height: mapFrameHeight)
-                    .onTapGesture(perform: showDetailColumn)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                .frame(height: mapFrameHeight)
+                .onTapGesture(perform: showDetailColumn)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 
                 Text("Created on \(route.creationDate.formatted())")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+#endif
                 
                 // MARK: - Statistics
                 SectionHeader(title: "Statistics")
@@ -65,6 +67,7 @@ struct RouteContent: View {
                 }
                 
                 // MARK: - Elevation Profile
+#if os(iOS)
                 SectionHeader(title: "Elevation Profile") {
                     if isElevationProfileExpanded {
                         contractedElevationProfileButton
@@ -78,7 +81,7 @@ struct RouteContent: View {
                     route: route, isElevationProfileExpanded: $isElevationProfileExpanded
                 )
                 .onTapGesture(perform: showDetailColumn)
-                
+#endif
                 
                 // MARK: - Breakdown by Day
                 SectionHeader(title: "Breakdown by Day")
