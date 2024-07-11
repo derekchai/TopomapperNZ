@@ -31,7 +31,7 @@ struct RoutesScene: View {
         // MARK: - Detail
         } detail: {
             if let selectedRoute {
-                Text("\(selectedRoute.name) detail")
+                RouteDetail(route: selectedRoute)
             } else {
                 Text("Select a Route")
             }
