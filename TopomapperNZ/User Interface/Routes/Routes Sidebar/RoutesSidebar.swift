@@ -12,11 +12,31 @@ struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State internal var isPresentingNewRouteSheet = false
-    @State internal var sortMode: SortMode = .creationDate
     
     @Environment(\.modelContext) internal var modelContext
     @Query internal var routes: [Route]
     
+    // MARK: - Initializer
+    init(
+        selectedRoute: Binding<Route?>,
+        routeSortMode: Route.SortMode,
+        routeSortOrder: Route.SortOrder
+    ) {
+        _selectedRoute = selectedRoute
+        
+        switch routeSortMode {
+        case .name:
+            _routes = Query(
+                sort: [SortDescriptor(\Route.name, order: routeSortOrder.sortOrder)]
+            )
+        case .creationDate:
+            _routes = Query(
+                sort: [SortDescriptor(\Route.creationDate, order: routeSortOrder.sortOrder)]
+            )
+        }
+    }
+    
+    // MARK: - Body
     var body: some View {
         Group {
             if routes.isEmpty {
@@ -46,14 +66,6 @@ struct RoutesSidebar: View {
                     action: presentNewRouteSheet
                 )
             }
-            
-            ToolbarItem(placement: .secondaryAction) {
-                Picker("Sort mode", systemImage: Symbol.sortBy, selection: $sortMode) {
-                    ForEach(SortMode.allCases) { mode in
-                        Text(mode.rawValue)
-                    }
-                }
-            }
         }
         .sheet(isPresented: $isPresentingNewRouteSheet) {
             NewRouteSheet()
@@ -61,18 +73,9 @@ struct RoutesSidebar: View {
     }
 }
 
-// MARK: - RoutesSidebar.SortMode Enumeration
-extension RoutesSidebar {
-    enum SortMode: String, CaseIterable, Identifiable {
-        case name = "Name"
-        case creationDate = "Creation Date"
-        
-        var id: Self { self }
-    }
-}
 
-#Preview {
-    @Previewable @State var routeSelection: Route? = nil
-    
-    RoutesSidebar(selectedRoute: $routeSelection)
-}
+//#Preview {
+//    @Previewable @State var routeSelection: Route? = nil
+//    
+//    RoutesSidebar(selectedRoute: $routeSelection, sortDescriptor: )
+//}

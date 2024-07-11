@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81DE30C2C3FF09F0042F752 /* Route+SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE30B2C3FF09F0042F752 /* Route+SortOrder.swift */; };
+		A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A81DE30B2C3FF09F0042F752 /* Route+SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SortOrder.swift"; sourceTree = "<group>"; };
+		A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SortMode.swift"; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81DE30F2C3FF1520042F752 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				A81DE30B2C3FF09F0042F752 /* Route+SortOrder.swift */,
+				A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
 		A86508882C3B48770091EE0D = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +287,7 @@
 				A86508D82C3B695C0091EE0D /* RoutePoint.swift */,
 				A86508DA2C3B6A8B0091EE0D /* GPXTrackPoint.swift */,
 				A86508E12C3B8C630091EE0D /* GPXParser.swift */,
+				A81DE30F2C3FF1520042F752 /* Enumerations */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -549,9 +563,11 @@
 				A8A053B72C3FD9D4002DB74E /* RouteDetail.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
+				A81DE30C2C3FF09F0042F752 /* Route+SortOrder.swift in Sources */,
 				A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */,
 				A8D6865D2C3D081C00B725F6 /* Route+Rename.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
+				A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */,
 				A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */,
 				A8A053B22C3E8A72002DB74E /* StartEndAnnotation.swift in Sources */,
 				A8D686852C3E2F4600B725F6 /* View+ConditionalViewModifier.swift in Sources */,
