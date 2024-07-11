@@ -29,11 +29,17 @@ extension RouteMapViewController: MKMapViewDelegate {
         _ mapView: MKMapView,
         viewFor annotation: any MKAnnotation
     ) -> MKAnnotationView? {
+        let identifier = String(describing: annotation.self)
+        
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) {
+            return dequeuedView
+        }
+        
         switch annotation {
         case let startEndAnnotation as StartEndAnnotation:
             return StartEndAnnotationView(
                 annotation: annotation,
-                reuseIdentifier: nil
+                reuseIdentifier: identifier
             )
         default:
             fatalError("Unhandled annotation type: \(annotation).")
