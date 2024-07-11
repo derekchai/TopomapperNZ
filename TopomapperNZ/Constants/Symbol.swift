@@ -19,4 +19,5 @@ enum Symbol {
     static let startPoint = "a.circle.fill"
     static let endPoint = "b.circle.fill"
     static let sortBy = "arrow.up.arrow.down"
+    static let add = "plus"
 }
