@@ -9,8 +9,8 @@ import SwiftUI
 import Charts
 
 struct RouteElevationProfileChart: View {
-    @Binding var isElevationProfileExpanded: Bool
     let route: Route
+    @Binding var isElevationProfileExpanded: Bool
     
     var body: some View {
         Chart {
@@ -36,7 +36,6 @@ struct RouteElevationProfileChart: View {
 #Preview {
     @Previewable @State var isElevationProfileExpanded = false
     RouteElevationProfileChart(
-        isElevationProfileExpanded: $isElevationProfileExpanded,
-        route: Route.sampleData.first!
+        route: Route.sampleData.first!, isElevationProfileExpanded: $isElevationProfileExpanded
     )
 }

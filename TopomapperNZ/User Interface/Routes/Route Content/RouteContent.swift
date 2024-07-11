@@ -75,8 +75,7 @@ struct RouteContent: View {
                 .padding(.top)
                 
                 RouteElevationProfileChart(
-                    isElevationProfileExpanded: $isElevationProfileExpanded,
-                    route: route
+                    route: route, isElevationProfileExpanded: $isElevationProfileExpanded
                 )
                 .onTapGesture(perform: showDetailColumn)
                 
