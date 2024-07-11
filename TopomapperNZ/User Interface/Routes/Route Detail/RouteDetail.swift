@@ -15,7 +15,11 @@ struct RouteDetail: View {
     var body: some View {
         VStack {
             Map {}
-            Text("Interactive Elevation Profile Chart Here")
+            
+            RouteElevationProfileChart(
+                route: route,
+                isElevationProfileExpanded: .constant(false)
+            )
         }
         .navigationTitle(route.name)
     }
