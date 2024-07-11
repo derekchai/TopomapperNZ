@@ -29,7 +29,6 @@ struct RouteDetail: View {
                 isElevationProfileExpanded: .constant(false)
             )
         }
-        .navigationTitle(route.name)
     }
 }
 
