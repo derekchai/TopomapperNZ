@@ -12,9 +12,17 @@ import Charts
 struct RouteDetail: View {
     let route: Route
     
+    @State private var mapSize: CGSize = .zero
+    
     var body: some View {
         VStack {
-            Map {}
+            GeometryReader { proxy in
+                RouteMapViewControllerRepresentable(
+                    route: route,
+                    mapFrameHeight: mapSize.height
+                )
+                .onAppear(perform: { setMapSize(to: proxy.size) })
+            }
             
             RouteElevationProfileChart(
                 route: route,
@@ -22,6 +30,13 @@ struct RouteDetail: View {
             )
         }
         .navigationTitle(route.name)
+    }
+}
+
+// MARK: - Actions
+extension RouteDetail {
+    internal func setMapSize(to size: CGSize) {
+        self.mapSize = size
     }
 }
 
