@@ -12,6 +12,7 @@ struct RoutesSidebar: View {
     @Binding var selectedRoute: Route?
     
     @State internal var isPresentingNewRouteSheet = false
+    @State internal var sortMode: SortMode = .creationDate
     
     @Environment(\.modelContext) internal var modelContext
     @Query internal var routes: [Route]
@@ -39,12 +40,34 @@ struct RoutesSidebar: View {
         .navigationTitle("My Routes")
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button("New Route", action: presentNewRouteSheet)
+                Button(
+                    "New Route",
+                    systemImage: Symbol.add,
+                    action: presentNewRouteSheet
+                )
+            }
+            
+            ToolbarItem(placement: .secondaryAction) {
+                Picker("Sort mode", systemImage: Symbol.sortBy, selection: $sortMode) {
+                    ForEach(SortMode.allCases) { mode in
+                        Text(mode.rawValue)
+                    }
+                }
             }
         }
         .sheet(isPresented: $isPresentingNewRouteSheet) {
             NewRouteSheet()
         }
+    }
+}
+
+// MARK: - RoutesSidebar.SortMode Enumeration
+extension RoutesSidebar {
+    enum SortMode: String, CaseIterable, Identifiable {
+        case name = "Name"
+        case creationDate = "Creation Date"
+        
+        var id: Self { self }
     }
 }
 
