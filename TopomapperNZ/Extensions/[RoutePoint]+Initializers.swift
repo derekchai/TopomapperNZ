@@ -9,6 +9,11 @@ import Foundation
 import CoreLocation
 
 extension [RoutePoint] {
+    /// Initializes an array of `RoutePoint`s from an array of `GPXTrackPoint`s.
+    ///
+    /// This initializer calculates the distance from start and grade for each
+    /// given `GPXTrackPoint`.
+    /// - Parameter gpxTrackPoints: The array of `GPXTrackPoints` to be converted.
     init(from gpxTrackPoints: [GPXTrackPoint]) {
         var distanceFromStart: CLLocationDistance = 0
         
