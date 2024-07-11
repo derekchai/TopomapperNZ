@@ -14,13 +14,7 @@ struct RouteListItem: View {
     var body: some View {
         HStack {
             RoutePathShape(route: route)
-                .stroke(
-                    style: StrokeStyle(
-                        lineWidth: 2,
-                        lineCap: .round,
-                        lineJoin: .round
-                    )
-                )
+                .stroke(style: .routeListItemPath)
                 .frame(width: 60, height: 60)
             
             VStack(alignment: .leading) {

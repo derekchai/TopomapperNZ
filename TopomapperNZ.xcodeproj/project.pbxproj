@@ -10,6 +10,7 @@
 		A81DE30C2C3FF09F0042F752 /* Route+SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE30B2C3FF09F0042F752 /* Route+SortOrder.swift */; };
 		A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */; };
 		A81DE3152C4098B80042F752 /* RoutePathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3142C4098B80042F752 /* RoutePathShape.swift */; };
+		A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		A81DE30B2C3FF09F0042F752 /* Route+SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SortOrder.swift"; sourceTree = "<group>"; };
 		A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SortMode.swift"; sourceTree = "<group>"; };
 		A81DE3142C4098B80042F752 /* RoutePathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathShape.swift; sourceTree = "<group>"; };
+		A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListItemPathStrokeStyle.swift; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D686692C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift */,
+				A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */,
 				A8D6866B2C3DE26200B725F6 /* ElevationFormatStyle.swift */,
 			);
 			path = Styles;
@@ -533,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A053B92C3FDA9B002DB74E /* RouteElevationProfileChart.swift in Sources */,
+				A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */,
 				A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */,
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
 				A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */,
