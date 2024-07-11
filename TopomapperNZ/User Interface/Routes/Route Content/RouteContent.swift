@@ -84,16 +84,35 @@ struct RouteContent: View {
 #endif
                 
                 // MARK: - Breakdown by Day
-                SectionHeader(title: "Breakdown by Day")
+                SectionHeader(title: "Breakdown by Day") {
+                    Button("Add Day") {}
+                }
                     .padding(.top)
                 
                 Text("Day 1")
-                    .font(.subheadline)
-                Text("Day 2")
-                    .font(.subheadline)
-                Text("Day 3")
-                    .font(.subheadline)
+                    .font(.headline)
                 
+                HStack {
+                    Statistic(
+                        label: "Length",
+                        systemImageName: Symbol.distance,
+                        value: route.length.formatted(.routeLength)
+                    )
+                    Divider()
+                    Statistic(
+                        label: "Alt. Gain",
+                        systemImageName: Symbol.elevationGain,
+                        value: route.cumulativeElevationGain
+                            .formatted(.elevation)
+                    )
+                    Divider()
+                    Statistic(
+                        label: "Alt. Loss",
+                        systemImageName: Symbol.elevationLoss,
+                        value: route.cumulativeElevationLoss
+                            .formatted(.elevation)
+                    )
+                }
             } // VStack
             .padding()
         } // ScrollView
