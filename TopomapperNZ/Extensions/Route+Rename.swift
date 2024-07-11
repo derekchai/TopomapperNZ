@@ -8,6 +8,8 @@
 import Foundation
 
 extension Route {
+    /// Renames the `Route` to the given new name.
+    /// - Parameter newName: The name to rename the `Route` to.
     func rename(to newName: String) {
         self.name = newName
     }
