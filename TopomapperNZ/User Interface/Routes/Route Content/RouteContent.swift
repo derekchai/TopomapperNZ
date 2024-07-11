@@ -74,24 +74,12 @@ struct RouteContent: View {
                 }
                 .padding(.top)
                 
-                Chart {
-                    LinePlot(
-                        route.points,
-                        x: .value("Distance from start", \.distanceFromStart),
-                        y: .value("Elevation", \.elevation)
-                    )
-                }
-                .frame(height: 200)
-                .chartXAxis {
-                    AxisMarks(format: .routeLength)
-                }
-                .chartYAxis {
-                    AxisMarks(format: .elevation)
-                }
+                RouteElevationProfileChart(
+                    isElevationProfileExpanded: $isElevationProfileExpanded,
+                    route: route
+                )
                 .onTapGesture(perform: showDetailColumn)
-                .if(isElevationProfileExpanded) { view in
-                    view.chartScrollableAxes(.horizontal)
-                }
+                
                 
                 // MARK: - Breakdown by Day
                 SectionHeader(title: "Breakdown by Day")
