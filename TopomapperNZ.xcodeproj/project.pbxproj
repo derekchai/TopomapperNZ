@@ -11,6 +11,7 @@
 		A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */; };
 		A81DE3152C4098B80042F752 /* RoutePathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3142C4098B80042F752 /* RoutePathShape.swift */; };
 		A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */; };
+		A81DE31D2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -85,6 +86,7 @@
 		A81DE30D2C3FF0A40042F752 /* Route+SortMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+SortMode.swift"; sourceTree = "<group>"; };
 		A81DE3142C4098B80042F752 /* RoutePathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathShape.swift; sourceTree = "<group>"; };
 		A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListItemPathStrokeStyle.swift; sourceTree = "<group>"; };
+		A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[RoutePoint]+NearestPointToDistance.swift"; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			children = (
 				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
 				A8CA0BE92C3BF887007035F7 /* [RoutePoint]+Initializers.swift */,
+				A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */,
 				A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */,
 				A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */,
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
@@ -561,6 +564,7 @@
 				A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */,
 				A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
+				A81DE31D2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift in Sources */,
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
