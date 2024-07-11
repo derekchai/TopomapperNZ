@@ -28,6 +28,7 @@
 		A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508E12C3B8C630091EE0D /* GPXParser.swift */; };
 		A8A053B22C3E8A72002DB74E /* StartEndAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */; };
 		A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */; };
+		A8A053B72C3FD9D4002DB74E /* RouteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B62C3FD9D4002DB74E /* RouteDetail.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -99,6 +100,7 @@
 		A86508E12C3B8C630091EE0D /* GPXParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPXParser.swift; sourceTree = "<group>"; };
 		A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndAnnotation.swift; sourceTree = "<group>"; };
 		A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartEndAnnotationView.swift; sourceTree = "<group>"; };
+		A8A053B62C3FD9D4002DB74E /* RouteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetail.swift; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				A86508C42C3B4B320091EE0D /* RoutesScene.swift */,
 				A8D6865F2C3D1AD400B725F6 /* Routes Sidebar */,
 				A8D6865E2C3D1ABB00B725F6 /* Route Content */,
+				A8A053B52C3FD99F002DB74E /* Route Detail */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -298,6 +301,14 @@
 				A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8A053B52C3FD99F002DB74E /* Route Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A8A053B62C3FD9D4002DB74E /* RouteDetail.swift */,
+			);
+			path = "Route Detail";
 			sourceTree = "<group>";
 		};
 		A8CA0BE62C3BF815007035F7 /* Protocol Conformance */ = {
@@ -531,6 +542,7 @@
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,
 				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,
+				A8A053B72C3FD9D4002DB74E /* RouteDetail.swift in Sources */,
 				A86508C32C3B4A600091EE0D /* Symbol.swift in Sources */,
 				A86508D72C3B60360091EE0D /* Statistic.swift in Sources */,
 				A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */,
