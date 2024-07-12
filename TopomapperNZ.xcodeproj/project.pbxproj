@@ -24,6 +24,7 @@
 		A852FD252C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */; };
 		A852FD272C4114B20067D203 /* Double+Rounding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD262C4114B20067D203 /* Double+Rounding.swift */; };
 		A852FD2B2C41273B0067D203 /* MultiDayPlannerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD2A2C41273B0067D203 /* MultiDayPlannerSheet.swift */; };
+		A852FD372C4132320067D203 /* RoutePointSelectionAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD362C4132320067D203 /* RoutePointSelectionAnnotation.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -111,6 +112,7 @@
 		A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+CoordinateRoutePointDictionary.swift"; sourceTree = "<group>"; };
 		A852FD262C4114B20067D203 /* Double+Rounding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Rounding.swift"; sourceTree = "<group>"; };
 		A852FD2A2C41273B0067D203 /* MultiDayPlannerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayPlannerSheet.swift; sourceTree = "<group>"; };
+		A852FD362C4132320067D203 /* RoutePointSelectionAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePointSelectionAnnotation.swift; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				A8D6867D2C3E260C00B725F6 /* RoutePathOutlinePolyline.swift */,
 				A8A053B12C3E8A72002DB74E /* StartEndAnnotation.swift */,
 				A8A053B32C3E8B7F002DB74E /* StartEndAnnotationView.swift */,
+				A852FD362C4132320067D203 /* RoutePointSelectionAnnotation.swift */,
 			);
 			path = "MapKit Annotations and Overlays";
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				A852FD172C40C75A0067D203 /* MultiDayPlannerMapViewController.swift in Sources */,
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
 				A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */,
+				A852FD372C4132320067D203 /* RoutePointSelectionAnnotation.swift in Sources */,
 				A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */,
 				A86508D92C3B695C0091EE0D /* RoutePoint.swift in Sources */,
 				A86508E22C3B8C630091EE0D /* GPXParser.swift in Sources */,
