@@ -15,6 +15,7 @@
 		A827B8622C40A9FD0071C6ED /* ProfileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8612C40A9FD0071C6ED /* ProfileScene.swift */; };
 		A827B8652C40AA680071C6ED /* ProfileSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8642C40AA680071C6ED /* ProfileSidebar.swift */; };
 		A827B8682C40AA8C0071C6ED /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8672C40AA8C0071C6ED /* ProfileDetail.swift */; };
+		A852FD172C40C75A0067D203 /* MultiDayPlannerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD162C40C75A0067D203 /* MultiDayPlannerMap.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -93,6 +94,7 @@
 		A827B8612C40A9FD0071C6ED /* ProfileScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene.swift; sourceTree = "<group>"; };
 		A827B8642C40AA680071C6ED /* ProfileSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSidebar.swift; sourceTree = "<group>"; };
 		A827B8672C40AA8C0071C6ED /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
+		A852FD162C40C75A0067D203 /* MultiDayPlannerMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayPlannerMap.swift; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,14 @@
 			path = "Profile Detail";
 			sourceTree = "<group>";
 		};
+		A852FD152C40C72A0067D203 /* Multi-Day Planner Map */ = {
+			isa = PBXGroup;
+			children = (
+				A852FD162C40C75A0067D203 /* MultiDayPlannerMap.swift */,
+			);
+			path = "Multi-Day Planner Map";
+			sourceTree = "<group>";
+		};
 		A86508882C3B48770091EE0D = {
 			isa = PBXGroup;
 			children = (
@@ -336,10 +346,11 @@
 			children = (
 				A8D686862C3E3CE800B725F6 /* SectionHeader.swift */,
 				A86508D62C3B60360091EE0D /* Statistic.swift */,
-				A8D6867A2C3E249600B725F6 /* MapKit Annotations and Overlays */,
-				A8D6866F2C3E1DEF00B725F6 /* Route Map */,
 				A8A053B82C3FDA9B002DB74E /* RouteElevationProfileChart.swift */,
 				A81DE3142C4098B80042F752 /* RoutePathShape.swift */,
+				A8D6867A2C3E249600B725F6 /* MapKit Annotations and Overlays */,
+				A8D6866F2C3E1DEF00B725F6 /* Route Map */,
+				A852FD152C40C72A0067D203 /* Multi-Day Planner Map */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -575,6 +586,7 @@
 				A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */,
 				A827B8682C40AA8C0071C6ED /* ProfileDetail.swift in Sources */,
 				A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */,
+				A852FD172C40C75A0067D203 /* MultiDayPlannerMap.swift in Sources */,
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
 				A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */,
 				A8D6865B2C3CCF1E00B725F6 /* EditRouteSheet.swift in Sources */,
