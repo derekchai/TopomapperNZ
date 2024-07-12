@@ -28,6 +28,7 @@ struct RouteDetail: View {
                 route: route,
                 isElevationProfileExpanded: .constant(false)
             )
+            .padding()
         }
     }
 }
