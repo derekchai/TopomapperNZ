@@ -21,6 +21,7 @@
 		A852FD1F2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD1E2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift */; };
 		A852FD212C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */; };
 		A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */; };
+		A852FD252C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		A852FD1E2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayPlannerMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Hashable.swift"; sourceTree = "<group>"; };
 		A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
+		A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+CoordinateRoutePointDictionary.swift"; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -368,18 +370,19 @@
 		A86508DC2C3B6D3D0091EE0D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
 				A8CA0BE92C3BF887007035F7 /* [RoutePoint]+Initializers.swift */,
 				A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */,
 				A8CA0BEB2C3BFA44007035F7 /* CLLocation+Initializers.swift */,
 				A8CA0BED2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift */,
 				A8CA0BEF2C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift */,
-				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
-				A8D686642C3D398000B725F6 /* Route+Metrics.swift */,
-				A8D6867F2C3E26AA00B725F6 /* Route+Annotations&Overlays.swift */,
-				A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */,
 				A852FD1A2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift */,
 				A852FD1C2C40CDE00067D203 /* MKPolyline+ClosestPointInPolylineToPoint.swift */,
+				A8D6867F2C3E26AA00B725F6 /* Route+Annotations&Overlays.swift */,
+				A8D686642C3D398000B725F6 /* Route+Metrics.swift */,
+				A8D6865C2C3D081C00B725F6 /* Route+Rename.swift */,
+				A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */,
+				A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */,
+				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -396,11 +399,11 @@
 			isa = PBXGroup;
 			children = (
 				A86508DD2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift */,
+				A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */,
+				A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */,
 				A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */,
 				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
-				A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */,
-				A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */,
 			);
 			path = "Protocol Conformance";
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				A86508D02C3B54590091EE0D /* Route.swift in Sources */,
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
+				A852FD252C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift in Sources */,
 				A852FD1B2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift in Sources */,
 				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
 				A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
