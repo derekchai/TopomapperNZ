@@ -44,6 +44,21 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
     }
     
     // MARK: - Helper Functions
+    /// Updates the map's annotations accordingly such that only annotations which
+    /// share the same coordinates as stops in `newStops` are retained.
+    /// - Parameter newStops: The new array of stops.
+    func updateStops(to newStops: [RoutePoint]) {
+        let newCoordinates = newStops.map { $0.coordinate }
+        
+        for annotation in mapView.annotations {
+            guard let annotation = annotation as? RoutePointSelectionAnnotation else { continue }
+            
+            if !newCoordinates.contains(annotation.coordinate) {
+                mapView.removeAnnotation(annotation)
+            }
+        }
+    }
+    
     private func addTapGestureRecognizer() {
         let tapGestureRecognizer = UITapGestureRecognizer(
             target: self,

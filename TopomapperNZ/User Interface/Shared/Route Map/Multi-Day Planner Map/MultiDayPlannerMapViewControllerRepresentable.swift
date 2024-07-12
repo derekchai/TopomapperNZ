@@ -10,6 +10,8 @@ import UIKit
 import SwiftUI
 
 struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresentable, MultiDayPlannerMapViewControllerDelegate {
+    @Binding var stops: [RoutePoint]
+    
     let route: Route
     let mapFrameHeight: CGFloat
     let onUpdateSelectedRoutePoint: (RoutePoint?) -> Void
@@ -27,7 +29,7 @@ struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresenta
         _ uiViewController: MultiDayPlannerMapViewController,
         context: Context
     ) {
-        // Update code goes here.
+        uiViewController.updateStops(to: stops)
     }
     
     // MARK: - MultiDayPlannerMapViewControllerDelegate Methods

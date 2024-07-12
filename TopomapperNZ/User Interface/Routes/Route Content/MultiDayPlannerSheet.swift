@@ -17,6 +17,7 @@ struct MultiDayPlannerSheet: View {
             List {
                 Section("Route Map") {
                     MultiDayPlannerMapViewControllerRepresentable(
+                        stops: $stops,
                         route: route,
                         mapFrameHeight: 350,
                         onUpdateSelectedRoutePoint: addRoutePointToStops
