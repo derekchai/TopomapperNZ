@@ -11,6 +11,19 @@ import CoreLocation
 import MapKit
 
 class MultiDayPlannerMapViewController: RouteMapViewController {
+    let coordinateRoutePointDictionary: [CLLocationCoordinate2D: RoutePoint]
+    
+    // MARK: - Initializer Overrides
+    override init(route: Route, mapFrameHeight: CGFloat) {
+        self.coordinateRoutePointDictionary = route.coordinateRoutePointDictionary
+        
+        super.init(route: route, mapFrameHeight: mapFrameHeight)
+    }
+
+    @MainActor required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Method Overrides
     override func loadView() {
         super.loadView()
@@ -59,10 +72,18 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
         
         guard let closestPointToTap else { return }
         
+        // Round the lat. and lon. of closestPointToTap to 6 d.p.
+        let roundedClosestCoordinateToTap = CLLocationCoordinate2D(
+            latitude: closestPointToTap.coordinate.latitude.rounded(toPlaces: 6),
+            longitude: closestPointToTap.coordinate.longitude.rounded(toPlaces: 6)
+        )
+        
         let distanceAway = closestPointToTap.distance(to: tappedMapPoint)
         
         if distanceAway <= maximumMetersFromPoint {
-            print(String(describing: closestPointToTap))
+            if let tappedRoutePoint = coordinateRoutePointDictionary[roundedClosestCoordinateToTap] {
+                print(String(describing: tappedRoutePoint))
+            }
         }
     }
 }
