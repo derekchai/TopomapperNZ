@@ -27,7 +27,8 @@ extension [RoutePoint] {
                     coordinate: trackPoint.coordinate,
                     elevation: trackPoint.elevation,
                     distanceFromStart: 0,
-                    grade: 0
+                    grade: 0,
+                    day: nil
                 )
                 
                 output.append(routePoint)
@@ -57,7 +58,8 @@ extension [RoutePoint] {
                 coordinate: trackPoint.coordinate,
                 elevation: trackPoint.elevation,
                 distanceFromStart: distanceFromStart,
-                grade: grade
+                grade: grade,
+                day: nil
             )
             
             output.append(routePoint)

@@ -13,11 +13,19 @@ class RoutePoint: Codable {
     let elevation: CLLocationDistance
     let distanceFromStart: CLLocationDistance
     let grade: Double
+    let day: Int?
     
-    init(coordinate: CLLocationCoordinate2D, elevation: CLLocationDistance, distanceFromStart: CLLocationDistance, grade: Double) {
+    init(
+        coordinate: CLLocationCoordinate2D,
+        elevation: CLLocationDistance,
+        distanceFromStart: CLLocationDistance,
+        grade: Double,
+        day: Int?
+    ) {
         self.coordinate = coordinate
         self.elevation = elevation
         self.distanceFromStart = distanceFromStart
         self.grade = grade
+        self.day = day
     }
 }
