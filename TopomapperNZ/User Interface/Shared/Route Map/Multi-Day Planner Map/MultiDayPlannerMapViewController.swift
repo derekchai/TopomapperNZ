@@ -89,6 +89,12 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
         if distanceAway <= maximumMetersFromPoint {
             if let tappedRoutePoint = coordinateRoutePointDictionary[roundedClosestCoordinateToTap] {
                 delegate?.didUpdateSelectedRoutePoint(to: tappedRoutePoint)
+                
+                let routePointSelectionAnnotation = RoutePointSelectionAnnotation(
+                    coordinate: tappedRoutePoint.coordinate
+                )
+                
+                mapView.addAnnotation(routePointSelectionAnnotation)
             }
         }
     }
