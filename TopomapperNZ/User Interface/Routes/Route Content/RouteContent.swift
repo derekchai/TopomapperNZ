@@ -14,6 +14,7 @@ struct RouteContent: View {
     let route: Route
     
     @State internal var isPresentingEditRouteSheet = false
+    @State internal var isPresentingMultiDayPlannerSheet = false
     
     @State internal var isElevationProfileExpanded = false
     
@@ -85,7 +86,7 @@ struct RouteContent: View {
                 
                 // MARK: - Breakdown by Day
                 SectionHeader(title: "Breakdown by Day") {
-                    Button("Add Day") {}
+                    Button("Add Day") { isPresentingMultiDayPlannerSheet = true }
                 }
                     .padding(.top)
                 
@@ -124,6 +125,9 @@ struct RouteContent: View {
         }
         .sheet(isPresented: $isPresentingEditRouteSheet) {
             EditRouteSheet(route: route)
+        }
+        .sheet(isPresented: $isPresentingMultiDayPlannerSheet) {
+            EditDaysSheet(route: route)
         }
     }
 }
