@@ -12,6 +12,9 @@
 		A81DE3152C4098B80042F752 /* RoutePathShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3142C4098B80042F752 /* RoutePathShape.swift */; };
 		A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */; };
 		A81DE31D2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */; };
+		A827B8622C40A9FD0071C6ED /* ProfileScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8612C40A9FD0071C6ED /* ProfileScene.swift */; };
+		A827B8652C40AA680071C6ED /* ProfileSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8642C40AA680071C6ED /* ProfileSidebar.swift */; };
+		A827B8682C40AA8C0071C6ED /* ProfileDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A827B8672C40AA8C0071C6ED /* ProfileDetail.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -87,6 +90,9 @@
 		A81DE3142C4098B80042F752 /* RoutePathShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePathShape.swift; sourceTree = "<group>"; };
 		A81DE3182C409F230042F752 /* RouteListItemPathStrokeStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteListItemPathStrokeStyle.swift; sourceTree = "<group>"; };
 		A81DE31C2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[RoutePoint]+NearestPointToDistance.swift"; sourceTree = "<group>"; };
+		A827B8612C40A9FD0071C6ED /* ProfileScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScene.swift; sourceTree = "<group>"; };
+		A827B8642C40AA680071C6ED /* ProfileSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSidebar.swift; sourceTree = "<group>"; };
+		A827B8672C40AA8C0071C6ED /* ProfileDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetail.swift; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +197,32 @@
 			path = Enumerations;
 			sourceTree = "<group>";
 		};
+		A827B8602C40A9E80071C6ED /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A827B8612C40A9FD0071C6ED /* ProfileScene.swift */,
+				A827B8632C40AA5D0071C6ED /* Profile Sidebar */,
+				A827B8662C40AA7B0071C6ED /* Profile Detail */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A827B8632C40AA5D0071C6ED /* Profile Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				A827B8642C40AA680071C6ED /* ProfileSidebar.swift */,
+			);
+			path = "Profile Sidebar";
+			sourceTree = "<group>";
+		};
+		A827B8662C40AA7B0071C6ED /* Profile Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A827B8672C40AA8C0071C6ED /* ProfileDetail.swift */,
+			);
+			path = "Profile Detail";
+			sourceTree = "<group>";
+		};
 		A86508882C3B48770091EE0D = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +303,7 @@
 				A86508962C3B48770091EE0D /* ContentView.swift */,
 				A86508D52C3B60300091EE0D /* Shared */,
 				A86508C72C3B4B750091EE0D /* Routes */,
+				A827B8602C40A9E80071C6ED /* Profile */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -540,6 +573,7 @@
 			files = (
 				A8A053B92C3FDA9B002DB74E /* RouteElevationProfileChart.swift in Sources */,
 				A81DE3192C409F230042F752 /* RouteListItemPathStrokeStyle.swift in Sources */,
+				A827B8682C40AA8C0071C6ED /* ProfileDetail.swift in Sources */,
 				A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */,
 				A86508CB2C3B4EA40091EE0D /* RoutesSidebar.swift in Sources */,
 				A8D6866E2C3E1DE700B725F6 /* RouteMapViewControllerRepresentable.swift in Sources */,
@@ -562,6 +596,7 @@
 				A86508DE2C3B6D460091EE0D /* CLLocationCoordinate2D+Codable.swift in Sources */,
 				A86508D42C3B591D0091EE0D /* RouteContent.swift in Sources */,
 				A8D686712C3E1E2600B725F6 /* RouteMapViewController.swift in Sources */,
+				A827B8622C40A9FD0071C6ED /* ProfileScene.swift in Sources */,
 				A8CA0BDD2C3BD5B9007035F7 /* NewRouteSheet.swift in Sources */,
 				A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */,
 				A81DE31D2C40A3FD0042F752 /* [RoutePoint]+NearestPointToDistance.swift in Sources */,
@@ -581,6 +616,7 @@
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
 				A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */,
 				A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */,
+				A827B8652C40AA680071C6ED /* ProfileSidebar.swift in Sources */,
 				A8A053B22C3E8A72002DB74E /* StartEndAnnotation.swift in Sources */,
 				A8D686852C3E2F4600B725F6 /* View+ConditionalViewModifier.swift in Sources */,
 				A8CA0BE12C3BE934007035F7 /* NewRouteSheet+Actions.swift in Sources */,
