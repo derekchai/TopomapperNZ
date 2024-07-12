@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EditDaysSheet: View {
+struct MultiDayPlannerSheet: View {
     let route: Route
     
     @State private var stops: [RoutePoint] = []
@@ -31,7 +31,7 @@ struct EditDaysSheet: View {
     }
 }
 
-extension EditDaysSheet {
+extension MultiDayPlannerSheet {
     /// Adds the given `RoutePoint` to the list of stops for this multi-day
     /// `Route`. The `RoutePoint`s are added such that `stops` is in order of
     /// ascending distance from start.
@@ -58,5 +58,5 @@ extension EditDaysSheet {
 }
 
 #Preview {
-    EditDaysSheet(route: Route.sampleData.first!)
+    MultiDayPlannerSheet(route: Route.sampleData.first!)
 }
