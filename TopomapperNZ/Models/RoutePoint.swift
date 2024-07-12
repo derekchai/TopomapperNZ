@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class RoutePoint: Codable {
+class RoutePoint: Codable, Identifiable {
     let coordinate: CLLocationCoordinate2D
     let elevation: CLLocationDistance
     let distanceFromStart: CLLocationDistance
