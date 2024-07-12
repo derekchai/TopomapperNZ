@@ -46,7 +46,7 @@ class RouteMapViewController: UIViewController {
     
     // MARK: - Helper Functions
     /// Sets `MKMapView` properties such as the frame, controls shown, etc.
-    private func setupMapView() {
+    internal func setupMapView() {
         mapView.frame = CGRect(
             x: 0,
             y: 0,
@@ -62,7 +62,7 @@ class RouteMapViewController: UIViewController {
     }
     
     /// Adds the LINZ Topo50 `MKTileOverlay` to the map.
-    private func addTopo50Overlay() {
+    internal func addTopo50Overlay() {
         let topo50Overlay = MKTileOverlay(urlTemplate: TileServerURLTemplate.topo50)
         
         topo50Overlay.canReplaceMapContent = false
@@ -71,7 +71,7 @@ class RouteMapViewController: UIViewController {
     
     /// Adds the polylines describing the given `Route`'s path to the map, and
     /// zooms in on the polylines with animation.
-    private func addRoutePolylines() {
+    internal func addRoutePolylines() {
         let polylines = route.polylines
         
         for polyline in polylines {
@@ -87,7 +87,7 @@ class RouteMapViewController: UIViewController {
     }
     
     /// Adds the `Route`'s start and end annotations to the map.
-    private func addStartEndAnnotations() {
+    internal func addStartEndAnnotations() {
         for annotation in route.startEndAnnotation {
             mapView.addAnnotation(annotation)
         }
