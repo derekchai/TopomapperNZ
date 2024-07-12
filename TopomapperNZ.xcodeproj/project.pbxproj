@@ -19,6 +19,8 @@
 		A852FD1B2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD1A2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift */; };
 		A852FD1D2C40CDE00067D203 /* MKPolyline+ClosestPointInPolylineToPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD1C2C40CDE00067D203 /* MKPolyline+ClosestPointInPolylineToPoint.swift */; };
 		A852FD1F2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD1E2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift */; };
+		A852FD212C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */; };
+		A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */; };
 		A86508952C3B48770091EE0D /* TopomapperNZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508942C3B48770091EE0D /* TopomapperNZApp.swift */; };
 		A86508972C3B48770091EE0D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86508962C3B48770091EE0D /* ContentView.swift */; };
 		A865089B2C3B48790091EE0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A865089A2C3B48790091EE0D /* Assets.xcassets */; };
@@ -101,6 +103,8 @@
 		A852FD1A2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift"; sourceTree = "<group>"; };
 		A852FD1C2C40CDE00067D203 /* MKPolyline+ClosestPointInPolylineToPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPolyline+ClosestPointInPolylineToPoint.swift"; sourceTree = "<group>"; };
 		A852FD1E2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDayPlannerMapViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Hashable.swift"; sourceTree = "<group>"; };
+		A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Equatable.swift"; sourceTree = "<group>"; };
 		A86508912C3B48770091EE0D /* TopomapperNZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopomapperNZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A86508942C3B48770091EE0D /* TopomapperNZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopomapperNZApp.swift; sourceTree = "<group>"; };
 		A86508962C3B48770091EE0D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 				A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */,
 				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
+				A852FD202C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift */,
+				A852FD222C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift */,
 			);
 			path = "Protocol Conformance";
 			sourceTree = "<group>";
@@ -605,6 +611,7 @@
 				A81DE3152C4098B80042F752 /* RoutePathShape.swift in Sources */,
 				A8D686652C3D398000B725F6 /* Route+Metrics.swift in Sources */,
 				A8D686732C3E1F1700B725F6 /* RouteMapViewController+MKMapViewDelegateMethods.swift in Sources */,
+				A852FD212C410CCA0067D203 /* CLLocationCoordinate2D+Hashable.swift in Sources */,
 				A8D6866C2C3DE26200B725F6 /* ElevationFormatStyle.swift in Sources */,
 				A86508C52C3B4B320091EE0D /* RoutesScene.swift in Sources */,
 				A8CA0BEE2C3BFADB007035F7 /* CLLocationCoordinate2D+Distance.swift in Sources */,
@@ -628,6 +635,7 @@
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
 				A852FD1B2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift in Sources */,
 				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
+				A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,
 				A8D686792C3E22A600B725F6 /* Key.swift in Sources */,

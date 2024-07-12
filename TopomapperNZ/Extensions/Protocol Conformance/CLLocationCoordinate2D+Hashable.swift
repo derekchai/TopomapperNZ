@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import CoreLocation
+
+extension CLLocationCoordinate2D: @retroactive Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(latitude)
+        hasher.combine(longitude)
+    }
+}
