@@ -14,19 +14,34 @@ struct MultiDayPlannerSheet: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack {
+            List {
+                Section("Route Map") {
                     MultiDayPlannerMapViewControllerRepresentable(
                         route: route,
                         mapFrameHeight: 350,
                         onUpdateSelectedRoutePoint: addRoutePointToStops
                     )
                     .frame(height: 350)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .listRowInsets(EdgeInsets())
                 }
-                .padding()
-                .navigationTitle("Multi-Day Planner")
-            }
+                
+                Section("Stops") {
+                    if stops.isEmpty {
+                        ContentUnavailableView(
+                            "No Stops added",
+                            systemImage: Symbol.noStops,
+                            description: Text("Tap on a point on the Route's path to add a stop there!")
+                        )
+                    } else {
+                        ForEach(stops) { stop in
+                            Text(String(String(describing: stop.coordinate)))
+                        }
+                        .onDelete(perform: deleteStops)
+                    }
+                }
+            } // List
+            .navigationTitle("Multi-Day Planner")
+            
         }
     }
 }
@@ -54,6 +69,13 @@ extension MultiDayPlannerSheet {
         }
         
         stops.insert(routePoint, at: insertionIndex)
+    }
+    
+    /// Deletes stops at the given `indices`.
+    /// - Parameter indices: An `IndexSet` of all the indices where stops should
+    /// be deleted.
+    internal func deleteStops(at indices: IndexSet) {
+        stops.remove(atOffsets: indices)
     }
 }
 
