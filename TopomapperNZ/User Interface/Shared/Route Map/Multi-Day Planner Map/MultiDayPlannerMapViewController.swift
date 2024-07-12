@@ -12,14 +12,20 @@ import MapKit
 
 class MultiDayPlannerMapViewController: RouteMapViewController {
     let coordinateRoutePointDictionary: [CLLocationCoordinate2D: RoutePoint]
+    let delegate: MultiDayPlannerMapViewControllerDelegate?
     
-    // MARK: - Initializer Overrides
-    override init(route: Route, mapFrameHeight: CGFloat) {
+    // MARK: - Initializers
+    init(
+        route: Route,
+        mapFrameHeight: CGFloat,
+        delegate: MultiDayPlannerMapViewControllerDelegate? = nil
+    ) {
         self.coordinateRoutePointDictionary = route.coordinateRoutePointDictionary
+        self.delegate = delegate
         
         super.init(route: route, mapFrameHeight: mapFrameHeight)
     }
-
+    
     @MainActor required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -82,8 +88,13 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
         
         if distanceAway <= maximumMetersFromPoint {
             if let tappedRoutePoint = coordinateRoutePointDictionary[roundedClosestCoordinateToTap] {
-                print(String(describing: tappedRoutePoint))
+                delegate?.didUpdateSelectedRoutePoint(to: tappedRoutePoint)
             }
         }
     }
+}
+
+// MARK: - Delegate Protocol
+protocol MultiDayPlannerMapViewControllerDelegate {
+    func didUpdateSelectedRoutePoint(to newRoutePoint: RoutePoint?)
 }

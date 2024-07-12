@@ -17,11 +17,7 @@ struct RouteDetail: View {
     var body: some View {
         VStack {
             GeometryReader { proxy in
-//                RouteMapViewControllerRepresentable(
-//                    route: route,
-//                    mapFrameHeight: mapSize.height
-//                )
-                MultiDayPlannerMapViewControllerRepresentable(
+                RouteMapViewControllerRepresentable(
                     route: route,
                     mapFrameHeight: mapSize.height
                 )

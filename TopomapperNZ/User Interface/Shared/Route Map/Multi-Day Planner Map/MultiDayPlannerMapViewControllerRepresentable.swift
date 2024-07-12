@@ -9,14 +9,17 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresentable {
+struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresentable, MultiDayPlannerMapViewControllerDelegate {
     let route: Route
     let mapFrameHeight: CGFloat
+    let onUpdateSelectedRoutePoint: (RoutePoint?) -> Void
     
+    // MARK: - UIViewControllerRepresentable Protocol Methods
     func makeUIViewController(context: Context) -> MultiDayPlannerMapViewController {
         MultiDayPlannerMapViewController(
             route: route,
-            mapFrameHeight: mapFrameHeight
+            mapFrameHeight: mapFrameHeight,
+            delegate: self
         )
     }
     
@@ -25,5 +28,10 @@ struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresenta
         context: Context
     ) {
         // Update code goes here.
+    }
+    
+    // MARK: - MultiDayPlannerMapViewControllerDelegate Methods
+    func didUpdateSelectedRoutePoint(to newRoutePoint: RoutePoint?) {
+        onUpdateSelectedRoutePoint(newRoutePoint)
     }
 }
