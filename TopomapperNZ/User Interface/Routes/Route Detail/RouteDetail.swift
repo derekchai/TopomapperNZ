@@ -17,11 +17,15 @@ struct RouteDetail: View {
     var body: some View {
         VStack {
             GeometryReader { proxy in
-                RouteMapViewControllerRepresentable(
+//                RouteMapViewControllerRepresentable(
+//                    route: route,
+//                    mapFrameHeight: mapSize.height
+//                )
+                MultiDayPlannerMapViewControllerRepresentable(
                     route: route,
                     mapFrameHeight: mapSize.height
                 )
-                .onAppear(perform: { setMapSize(to: proxy.size) })
+                    .onAppear(perform: { setMapSize(to: proxy.size) })
             }
             
             RouteElevationProfileChart(

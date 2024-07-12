@@ -12,7 +12,7 @@ class RouteMapViewController: UIViewController {
     let route: Route
     let mapFrameHeight: CGFloat
     
-    private let mapView = MKMapView()
+    internal let mapView = MKMapView()
     
     // MARK: - Initializers
     init(route: Route, mapFrameHeight: CGFloat) {
