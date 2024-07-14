@@ -11,6 +11,7 @@ struct MultiDayPlannerSheet: View {
     let route: Route
     
     @State private var stops: [RoutePoint] = []
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationStack {
@@ -45,7 +46,15 @@ struct MultiDayPlannerSheet: View {
                 }
             } // List
             .navigationTitle("Multi-Day Planner")
-            
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save", action: saveMultiDayPlan)
+                }
+                
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", role: .cancel, action: cancel)
+                }
+            }
         }
     }
 }
@@ -80,6 +89,15 @@ extension MultiDayPlannerSheet {
     /// be deleted.
     internal func deleteStops(at indices: IndexSet) {
         stops.remove(atOffsets: indices)
+    }
+    
+    /// Dismisses the sheet without saving anything.
+    internal func cancel() {
+        self.dismiss()
+    }
+    
+    internal func saveMultiDayPlan() {
+        
     }
 }
 
