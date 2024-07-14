@@ -20,7 +20,6 @@ struct RoutesScene: View {
         // MARK: - Sidebar
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
             RoutesSidebar(
-                selectedRoute: $selectedRoute, 
                 searchText: $searchText,
                 routeSortMode: sortMode,
                 routeSortOrder: sortOrder
