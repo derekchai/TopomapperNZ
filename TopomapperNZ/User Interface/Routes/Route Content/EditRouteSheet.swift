@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct EditRouteSheet: View {
-    let route: Route
-    
     @Environment(\.dismiss) internal var dismiss
+    @Environment(AppState.self) internal var appState
+    
     @State internal var routeName: String
     @State internal var didEditRoute = false
     
     init(route: Route) {
-        self.route = route
         self.routeName = route.name
     }
     
@@ -46,7 +45,9 @@ extension EditRouteSheet {
     /// Updates the `Route` being edited's properties to the new provided
     /// properties, and then dismisses the sheet.
     internal func updateRoute() {
-        route.rename(to: routeName)
+        guard let selectedRoute = appState.selectedRoute else { return }
+        
+        selectedRoute.rename(to: routeName)
         dismiss()
     }
     
@@ -58,7 +59,9 @@ extension EditRouteSheet {
     /// Update `didEditRoute`, which expresses whether the user has or has not
     /// edited the `Route`'s properties to something different.
     internal func updateDidEditRoute() {
-        let originalRouteName = route.name
+        guard let selectedRoute = appState.selectedRoute else { return }
+        
+        let originalRouteName = selectedRoute.name
         
         if routeName == originalRouteName {
             didEditRoute = false

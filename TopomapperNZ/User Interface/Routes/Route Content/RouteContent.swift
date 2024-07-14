@@ -11,7 +11,7 @@ import Charts
 
 struct RouteContent: View {
     @Binding var preferredColumn: NavigationSplitViewColumn
-    var route: Route
+    let route: Route
     
     @State internal var isPresentingEditRouteSheet = false
     @State internal var isPresentingMultiDayPlannerSheet = false
