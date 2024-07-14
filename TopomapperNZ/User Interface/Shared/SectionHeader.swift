@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SectionHeader<Content: View>: View {
     let title: String
-    @ViewBuilder var actions: () -> Content
+    @ViewBuilder let actions: () -> Content
     
     // MARK: - Initializer
     init(
