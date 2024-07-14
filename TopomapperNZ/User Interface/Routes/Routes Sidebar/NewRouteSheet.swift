@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NewRouteSheet: View {
+    
+    // MARK: - Private Properties
     @Environment(\.modelContext) internal var modelContext
     @Environment(\.dismiss) internal var dismiss
     
@@ -25,6 +27,7 @@ struct NewRouteSheet: View {
     @State internal var error: Error? = nil
     @State internal var errorAlertTitle = ""
     
+    // MARK: - Body
     var body: some View {
         NavigationStack {
             Group {
@@ -79,6 +82,7 @@ struct NewRouteSheet: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
     NewRouteSheet()
 }
