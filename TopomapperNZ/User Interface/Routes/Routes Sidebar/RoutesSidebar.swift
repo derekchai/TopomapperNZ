@@ -9,12 +9,12 @@ import SwiftUI
 import SwiftData
 
 struct RoutesSidebar: View {
-    @Binding var selectedRoute: Route?
     @Binding var searchText: String
     
     @State internal var isPresentingNewRouteSheet = false
     
     @Environment(\.modelContext) internal var modelContext
+    @Environment(AppState.self) internal var appState
     @Query internal var routes: [Route]
     
     // MARK: - Computed Properties
@@ -28,12 +28,10 @@ struct RoutesSidebar: View {
     
     // MARK: - Initializer
     init(
-        selectedRoute: Binding<Route?>,
         searchText: Binding<String>,
         routeSortMode: Route.SortMode,
         routeSortOrder: Route.SortOrder
     ) {
-        _selectedRoute = selectedRoute
         _searchText = searchText
         
         switch routeSortMode {
@@ -58,7 +56,9 @@ struct RoutesSidebar: View {
                     description: Text("Create a new Route to get started!")
                 )
             } else {
-                List(selection: $selectedRoute) {
+                @Bindable var navigationState = appState
+                
+                List(selection: $navigationState.selectedRoute) {
                     ForEach(displayedRoutes) { route in
                         NavigationLink(value: route) {
                             RouteListItem(route: route)
@@ -66,7 +66,6 @@ struct RoutesSidebar: View {
                     }
                     .onDelete(perform: removeRoutes)
                 }
-                
             }
         } // Group
         .navigationTitle("My Routes")

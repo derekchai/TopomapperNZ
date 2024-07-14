@@ -9,8 +9,5 @@ import Foundation
 
 @Observable
 class AppState {
-    @Observable
-    class Navigation {
-        var selectedRoute: Route?
-    }
+    var selectedRoute: Route?
 }

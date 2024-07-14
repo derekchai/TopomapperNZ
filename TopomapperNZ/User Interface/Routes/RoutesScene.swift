@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RoutesScene: View {
-    @State private var selectedRoute: Route? = nil
+//    @State private var selectedRoute: Route? = nil
+    @Environment(AppState.self) private var appState
     @State private var preferredColumn = NavigationSplitViewColumn.sidebar
     @State private var searchText = ""
     
@@ -20,7 +21,6 @@ struct RoutesScene: View {
         // MARK: - Sidebar
         NavigationSplitView(preferredCompactColumn: $preferredColumn) {
             RoutesSidebar(
-                selectedRoute: $selectedRoute, 
                 searchText: $searchText,
                 routeSortMode: sortMode,
                 routeSortOrder: sortOrder
@@ -45,7 +45,7 @@ struct RoutesScene: View {
             
             // MARK: - Content
         } content: {
-            if let selectedRoute {
+            if let selectedRoute = appState.selectedRoute {
                 RouteContent(
                     preferredColumn: $preferredColumn,
                     route: selectedRoute
@@ -56,7 +56,7 @@ struct RoutesScene: View {
             
             // MARK: - Detail
         } detail: {
-            if let selectedRoute {
+            if let selectedRoute = appState.selectedRoute {
                 RouteDetail(route: selectedRoute)
             } else {
                 Text("Select a Route")
