@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MultiDayPlannerSheet: View {
-    let route: Route
+    var route: Route
     
     @State private var stops: [RoutePoint] = []
     @Environment(\.dismiss) private var dismiss
@@ -97,7 +97,19 @@ extension MultiDayPlannerSheet {
     }
     
     internal func saveMultiDayPlan() {
+        let routePoints = route.points
         
+        var day = 1
+        
+        for i in 0..<routePoints.count {
+            route.setDay(at: i, to: day)
+
+            if stops.contains(where: { $0 == routePoints[i]}) {
+                day += 1
+            }
+        }
+        
+        dismiss()
     }
 }
 

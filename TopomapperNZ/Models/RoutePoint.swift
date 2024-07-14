@@ -13,7 +13,7 @@ class RoutePoint: Codable, Identifiable {
     let elevation: CLLocationDistance
     let distanceFromStart: CLLocationDistance
     let grade: Double
-    let day: Int?
+    var day: Int?
     
     init(
         coordinate: CLLocationCoordinate2D,

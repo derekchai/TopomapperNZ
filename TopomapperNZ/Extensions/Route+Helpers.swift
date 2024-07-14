@@ -1,5 +1,5 @@
 //
-//  Route+Rename.swift
+//  Route+Helpers.swift
 //  TopomapperNZ
 //
 //  Created by Derek Chai on 09/07/2024.
@@ -12,5 +12,9 @@ extension Route {
     /// - Parameter newName: The name to rename the `Route` to.
     func rename(to newName: String) {
         self.name = newName
+    }
+    
+    func setDay(at index: Int, to day: Int?) {
+        self.points[index].day = day
     }
 }
