@@ -8,18 +8,26 @@
 import Foundation
 
 extension NewRouteSheet {
+    /// Dismisses this sheet.
     func dismissSheet() {
         dismiss()
     }
     
+    /// Dismisses the error alert.
     func dismissErrorAlert() {
         self.didError = false
     }
     
+    /// Presents the file importer interface.
     func presentFileImporter() {
         self.isPresentingFileImporter = true
     }
     
+    /// Handles the result of the file importer.
+    ///
+    /// If the result is successful, getes the selected file's URL and its last
+    /// path component. If the result fails, prints the error.
+    /// - Parameter result: The result from the file importer.
     func handleFileImporterResult(_ result: Result<[URL], Error>) {
         switch result {
         case .success(let urls):
@@ -41,6 +49,8 @@ extension NewRouteSheet {
         }
     }
     
+    /// Parses the GPX file URL and creates a new `Route`, inserting it into
+    /// the `modelContext`.
     func saveRoute() {
         guard let selectedFileURL else {
             showErrorAlert(title: "This file could not be opened")
