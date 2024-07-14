@@ -11,15 +11,18 @@ import Charts
 
 struct RouteContent: View {
     @Binding var preferredColumn: NavigationSplitViewColumn
-    let route: Route
+    var route: Route
     
     @State internal var isPresentingEditRouteSheet = false
     @State internal var isPresentingMultiDayPlannerSheet = false
     
     @State internal var isElevationProfileExpanded = false
     
+    @State internal var routePointsByDays = [Int: [RoutePoint]]()
+    
     private let mapFrameHeight: CGFloat = 350
     
+    // MARK: - Body
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -70,33 +73,16 @@ struct RouteContent: View {
                 }
                     .padding(.top)
                 
-                Text("Day 1")
-                    .font(.headline)
-                
-                HStack {
-                    Statistic(
-                        label: "Length",
-                        systemImageName: Symbol.distance,
-                        value: route.length.formatted(.routeLength)
-                    )
-                    Divider()
-                    Statistic(
-                        label: "Alt. Gain",
-                        systemImageName: Symbol.elevationGain,
-                        value: route.cumulativeElevationGain
-                            .formatted(.elevation)
-                    )
-                    Divider()
-                    Statistic(
-                        label: "Alt. Loss",
-                        systemImageName: Symbol.elevationLoss,
-                        value: route.cumulativeElevationLoss
-                            .formatted(.elevation)
-                    )
+                ForEach(0..<routePointsByDays.count, id: \.self) { i in
+                    Text("Day \(i + 1)")
+                        .font(.headline)
+                    
+                    RoutePointsStatistics(points: routePointsByDays[i + 1]!)
                 }
             } // VStack
             .padding()
         } // ScrollView
+        .onAppear(perform: setProperties)
         .navigationTitle(route.name)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -148,13 +134,18 @@ extension RouteContent {
     internal func contractElevationProfile() {
         isElevationProfileExpanded = false
     }
+    
+    internal func setProperties() {
+        self.routePointsByDays = route.pointsByDays
+        print(route.points.map { $0.day })
+    }
 }
 
 // MARK: - Preview
-#Preview {
-    @Previewable @State var preferredColumn = NavigationSplitViewColumn.content
-    
-    RouteContent(
-        preferredColumn: $preferredColumn, route: Route.sampleData.first!
-    )
-}
+//#Preview {
+//    @Previewable @State var preferredColumn = NavigationSplitViewColumn.content
+//    
+//    RouteContent(
+//        preferredColumn: $preferredColumn, route: Route.sampleData.first!
+//    )
+//}

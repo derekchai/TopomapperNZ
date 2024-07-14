@@ -51,6 +51,7 @@
 		A8A053B92C3FDA9B002DB74E /* RouteElevationProfileChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B82C3FDA9B002DB74E /* RouteElevationProfileChart.swift */; };
 		A8A768FC2C435AC10095A917 /* RoutePoint+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */; };
 		A8A768FE2C436ED20095A917 /* RoutePointsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A768FD2C436ED20095A917 /* RoutePointsStatistics.swift */; };
+		A8A769002C436FAC0095A917 /* RoutePoint+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A768FF2C436FAC0095A917 /* RoutePoint+Hashable.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -145,6 +146,7 @@
 		A8A053B82C3FDA9B002DB74E /* RouteElevationProfileChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteElevationProfileChart.swift; sourceTree = "<group>"; };
 		A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePoint+Equatable.swift"; sourceTree = "<group>"; };
 		A8A768FD2C436ED20095A917 /* RoutePointsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePointsStatistics.swift; sourceTree = "<group>"; };
+		A8A768FF2C436FAC0095A917 /* RoutePoint+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePoint+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */,
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
 				A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */,
+				A8A768FF2C436FAC0095A917 /* RoutePoint+Hashable.swift */,
 			);
 			path = "Protocol Conformance";
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				A8D6866A2C3DE0AF00B725F6 /* RouteLengthFormatStyle.swift in Sources */,
 				A8D6865D2C3D081C00B725F6 /* Route+Helpers.swift in Sources */,
 				A86508DB2C3B6A8B0091EE0D /* GPXTrackPoint.swift in Sources */,
+				A8A769002C436FAC0095A917 /* RoutePoint+Hashable.swift in Sources */,
 				A81DE30E2C3FF0A40042F752 /* Route+SortMode.swift in Sources */,
 				A8D686832C3E298B00B725F6 /* RoutePathRepresentable.swift in Sources */,
 				A827B8652C40AA680071C6ED /* ProfileSidebar.swift in Sources */,

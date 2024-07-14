@@ -23,6 +23,10 @@ extension Route {
         self.points[index].day = day
     }
     
+    func setPoints(to newPoints: [RoutePoint]) {
+        self.points = newPoints
+    }
+    
     /// Returns a dictionary where the key is the day (`Int`) of the `RoutePoint`
     /// and the value (`[RoutePoint]`) is an array of `RoutePoint`s in this
     /// `Route` which share the same `day`.
