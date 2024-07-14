@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct TopomapperNZApp: App {
+    @State private var appState = AppState()
+    
     static let subsystem = "com.derekchai.TopomapperNZ"
     
     var sharedModelContainer: ModelContainer = {
@@ -28,6 +30,7 @@ struct TopomapperNZApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(appState)
         }
         .modelContainer(sharedModelContainer)
     }
