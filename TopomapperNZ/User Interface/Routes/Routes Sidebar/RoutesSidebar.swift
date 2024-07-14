@@ -9,13 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct RoutesSidebar: View {
+    // MARK: - Exposed Properties
     @Binding var selectedRoute: Route?
     @Binding var searchText: String
     
-    @State internal var isPresentingNewRouteSheet = false
+    // MARK: - Private Properties
+    @Query internal var routes: [Route]
     
     @Environment(\.modelContext) internal var modelContext
-    @Query internal var routes: [Route]
+    
+    @State internal var isPresentingNewRouteSheet = false
     
     // MARK: - Computed Properties
     private var displayedRoutes: [Route] {
