@@ -51,7 +51,7 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
         let newCoordinates = newStops.map { $0.coordinate }
         
         for annotation in mapView.annotations {
-            guard let annotation = annotation as? RoutePointSelectionAnnotation else { continue }
+            guard let annotation = annotation as? StopAnnotation else { continue }
             
             if !newCoordinates.contains(annotation.coordinate) {
                 mapView.removeAnnotation(annotation)
@@ -105,7 +105,7 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
             if let tappedRoutePoint = coordinateRoutePointDictionary[roundedClosestCoordinateToTap] {
                 delegate?.didUpdateSelectedRoutePoint(to: tappedRoutePoint)
                 
-                let routePointSelectionAnnotation = RoutePointSelectionAnnotation(
+                let routePointSelectionAnnotation = StopAnnotation(
                     coordinate: tappedRoutePoint.coordinate
                 )
                 

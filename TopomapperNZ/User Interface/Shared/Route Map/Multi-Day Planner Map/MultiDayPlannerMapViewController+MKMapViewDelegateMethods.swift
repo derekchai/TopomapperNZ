@@ -26,7 +26,7 @@ extension MultiDayPlannerMapViewController {
                 reuseIdentifier: identifier
             )
             
-        case let routePointSelectionAnnotation as RoutePointSelectionAnnotation:
+        case let routePointSelectionAnnotation as StopAnnotation:
             let marker = MKMarkerAnnotationView(
                 annotation: routePointSelectionAnnotation,
                 reuseIdentifier: identifier

@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class RoutePointSelectionAnnotation: NSObject, MKAnnotation {
+class StopAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
 
     init(coordinate: CLLocationCoordinate2D) {
