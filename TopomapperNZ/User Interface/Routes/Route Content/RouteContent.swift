@@ -71,7 +71,7 @@ struct RouteContent: View {
                 
                 // MARK: - Breakdown by Day
                 SectionHeader(title: "Breakdown by Day") {
-                    Button("Add Day") { isPresentingMultiDayPlannerSheet = true }
+                    Button("Add Stops") { isPresentingMultiDayPlannerSheet = true }
                 }
                     .padding(.top)
                 
