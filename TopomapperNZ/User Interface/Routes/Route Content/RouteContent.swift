@@ -18,7 +18,9 @@ struct RouteContent: View {
     
     @State internal var isElevationProfileExpanded = false
     
-    @State internal var routePointsByDays = [Int: [RoutePoint]]()
+    internal var routePointsByDays: [Int: [RoutePoint]] {
+        route.pointsByDays
+    }
     
     private let mapFrameHeight: CGFloat = 350
     
@@ -136,7 +138,6 @@ extension RouteContent {
     }
     
     internal func setProperties() {
-        self.routePointsByDays = route.pointsByDays
     }
 }
 
