@@ -34,6 +34,9 @@ extension MultiDayPlannerMapViewController {
             
             marker.animatesWhenAdded = true
             marker.canShowCallout = false
+            marker.glyphImage = UIImage(
+                systemName: "\(routePointSelectionAnnotation.number).circle.fill"
+            )
             
             return marker
             

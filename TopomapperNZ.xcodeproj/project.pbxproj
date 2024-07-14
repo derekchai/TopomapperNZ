@@ -248,8 +248,8 @@
 		A852FD152C40C72A0067D203 /* Multi-Day Planner Map */ = {
 			isa = PBXGroup;
 			children = (
-				A852FD162C40C75A0067D203 /* MultiDayPlannerMapViewController.swift */,
 				A852FD1E2C40CE840067D203 /* MultiDayPlannerMapViewControllerRepresentable.swift */,
+				A852FD162C40C75A0067D203 /* MultiDayPlannerMapViewController.swift */,
 				A852FD382C4132F90067D203 /* MultiDayPlannerMapViewController+MKMapViewDelegateMethods.swift */,
 			);
 			path = "Multi-Day Planner Map";

@@ -44,18 +44,24 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
     }
     
     // MARK: - Helper Functions
-    /// Updates the map's annotations accordingly such that only annotations which
-    /// share the same coordinates as stops in `newStops` are retained.
-    /// - Parameter newStops: The new array of stops.
+    /// Updates the map's stops to the given array of new stops.
+    ///
+    /// This function removes all StopAnnotations from the map, and then adds
+    /// them again so that each stop's number is in the correct order.
+    /// - Parameter newStops: The new array of `RoutePoint`s
     func updateStops(to newStops: [RoutePoint]) {
-        let newCoordinates = newStops.map { $0.coordinate }
+        // Remove all StopAnnotations
+        for annotation in mapView.annotations where annotation is StopAnnotation {
+            mapView.removeAnnotation(annotation)
+        }
         
-        for annotation in mapView.annotations {
-            guard let annotation = annotation as? StopAnnotation else { continue }
+        for i in 0..<newStops.count {
+            let annotation = StopAnnotation(
+                coordinate: newStops[i].coordinate,
+                number: i + 1
+            )
             
-            if !newCoordinates.contains(annotation.coordinate) {
-                mapView.removeAnnotation(annotation)
-            }
+            mapView.addAnnotation(annotation)
         }
     }
     
@@ -107,7 +113,7 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
                 
                 let routePointSelectionAnnotation = StopAnnotation(
                     coordinate: tappedRoutePoint.coordinate,
-                    day: 1
+                    number: 0
                 )
                 
                 mapView.addAnnotation(routePointSelectionAnnotation)

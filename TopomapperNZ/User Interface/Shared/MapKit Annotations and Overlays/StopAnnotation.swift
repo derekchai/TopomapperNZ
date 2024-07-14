@@ -12,8 +12,8 @@ class StopAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
     var number: Int
 
-    init(coordinate: CLLocationCoordinate2D, day: Int) {
+    init(coordinate: CLLocationCoordinate2D, number: Int) {
         self.coordinate = coordinate
-        self.number = day
+        self.number = number
     }
 }
