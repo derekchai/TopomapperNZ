@@ -22,4 +22,23 @@ extension Route {
     func setDay(at index: Int, to day: Int?) {
         self.points[index].day = day
     }
+    
+    /// Returns a dictionary where the key is the day (`Int`) of the `RoutePoint`
+    /// and the value (`[RoutePoint]`) is an array of `RoutePoint`s in this
+    /// `Route` which share the same `day`.
+    var pointsByDays: [Int: [RoutePoint]] {
+        var output = [Int: [RoutePoint]]()
+        
+        for point in self.points {
+            guard let day = point.day else { continue }
+            
+            if output[day] != nil {
+                output[day]!.append(point)
+            } else {
+                output[day] = [point]
+            }
+        }
+        
+        return output
+    }
 }
