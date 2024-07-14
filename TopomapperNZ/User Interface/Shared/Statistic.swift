@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct Statistic: View {
-    var label: String
-    var systemImageName: String
-    var value: String
+    let label: String
+    let systemImageName: String
+    let value: String
     
     var body: some View {
         VStack(alignment: .leading) {
