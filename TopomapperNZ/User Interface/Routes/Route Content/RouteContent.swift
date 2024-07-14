@@ -79,12 +79,21 @@ struct RouteContent: View {
                 }
                     .padding(.top)
                 
-                ForEach(0..<routePointsByDays.count, id: \.self) { i in
-                    Text("Day \(i + 1)")
-                        .font(.headline)
-                    
-                    RoutePointsStatistics(points: routePointsByDays[i + 1] ?? [])
+                if routePointsByDays.isEmpty {
+                    ContentUnavailableView(
+                        "No Multi-Day Itinerary Planned",
+                        systemImage: Symbol.path,
+                        description: Text("Press the 'Add Stops' button to plan a multi-day trip.")
+                    )
+                } else {
+                    ForEach(0..<routePointsByDays.count, id: \.self) { i in
+                        Text("Day \(i + 1)")
+                            .font(.headline)
+                        
+                        RoutePointsStatistics(points: routePointsByDays[i + 1] ?? [])
+                    }
                 }
+                
             } // VStack
             .padding()
         } // ScrollView
