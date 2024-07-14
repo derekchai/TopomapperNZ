@@ -137,7 +137,6 @@ extension RouteContent {
     
     internal func setProperties() {
         self.routePointsByDays = route.pointsByDays
-        print(route.points.map { $0.day })
     }
 }
 
