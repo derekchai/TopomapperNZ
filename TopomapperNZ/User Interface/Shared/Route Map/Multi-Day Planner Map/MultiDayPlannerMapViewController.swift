@@ -106,7 +106,8 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
                 delegate?.didUpdateSelectedRoutePoint(to: tappedRoutePoint)
                 
                 let routePointSelectionAnnotation = StopAnnotation(
-                    coordinate: tappedRoutePoint.coordinate
+                    coordinate: tappedRoutePoint.coordinate,
+                    day: 1
                 )
                 
                 mapView.addAnnotation(routePointSelectionAnnotation)

@@ -10,8 +10,10 @@ import MapKit
 
 class StopAnnotation: NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
+    var number: Int
 
-    init(coordinate: CLLocationCoordinate2D) {
+    init(coordinate: CLLocationCoordinate2D, day: Int) {
         self.coordinate = coordinate
+        self.number = day
     }
 }
