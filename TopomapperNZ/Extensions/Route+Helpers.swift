@@ -14,6 +14,11 @@ extension Route {
         self.name = newName
     }
     
+    /// Sets the `day` property of a `RoutePoint` in this `Route`'s `points`
+    /// property to the given `day`.
+    /// - Parameters:
+    ///   - index: The index which the `RoutePoint` is located within `points`.
+    ///   - day: The new value of `day`.
     func setDay(at index: Int, to day: Int?) {
         self.points[index].day = day
     }
