@@ -50,6 +50,7 @@
 		A8A053B72C3FD9D4002DB74E /* RouteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B62C3FD9D4002DB74E /* RouteDetail.swift */; };
 		A8A053B92C3FDA9B002DB74E /* RouteElevationProfileChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A053B82C3FDA9B002DB74E /* RouteElevationProfileChart.swift */; };
 		A8A768FC2C435AC10095A917 /* RoutePoint+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */; };
+		A8A768FE2C436ED20095A917 /* RoutePointsStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A768FD2C436ED20095A917 /* RoutePointsStatistics.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -143,6 +144,7 @@
 		A8A053B62C3FD9D4002DB74E /* RouteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteDetail.swift; sourceTree = "<group>"; };
 		A8A053B82C3FDA9B002DB74E /* RouteElevationProfileChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteElevationProfileChart.swift; sourceTree = "<group>"; };
 		A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePoint+Equatable.swift"; sourceTree = "<group>"; };
+		A8A768FD2C436ED20095A917 /* RoutePointsStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePointsStatistics.swift; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -425,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				A86508D32C3B591D0091EE0D /* RouteContent.swift */,
+				A8A768FD2C436ED20095A917 /* RoutePointsStatistics.swift */,
 				A852FD2A2C41273B0067D203 /* MultiDayPlannerSheet.swift */,
 				A8D6865A2C3CCF1E00B725F6 /* EditRouteSheet.swift */,
 			);
@@ -658,6 +661,7 @@
 				A852FD252C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift in Sources */,
 				A852FD1B2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift in Sources */,
 				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
+				A8A768FE2C436ED20095A917 /* RoutePointsStatistics.swift in Sources */,
 				A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,

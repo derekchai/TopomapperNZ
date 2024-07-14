@@ -45,27 +45,7 @@ struct RouteContent: View {
                 SectionHeader(title: "Statistics")
                     .padding(.top)
                 
-                HStack {
-                    Statistic(
-                        label: "Length",
-                        systemImageName: Symbol.distance,
-                        value: route.length.formatted(.routeLength)
-                    )
-                    Divider()
-                    Statistic(
-                        label: "Alt. Gain",
-                        systemImageName: Symbol.elevationGain,
-                        value: route.cumulativeElevationGain
-                            .formatted(.elevation)
-                    )
-                    Divider()
-                    Statistic(
-                        label: "Alt. Loss",
-                        systemImageName: Symbol.elevationLoss,
-                        value: route.cumulativeElevationLoss
-                            .formatted(.elevation)
-                    )
-                }
+                RoutePointsStatistics(points: route.points)
                 
                 // MARK: - Elevation Profile
 #if os(iOS)
