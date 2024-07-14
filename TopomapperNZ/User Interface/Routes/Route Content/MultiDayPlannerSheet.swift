@@ -8,23 +8,24 @@
 import SwiftUI
 
 struct MultiDayPlannerSheet: View {
-     var route: Route
-    
     @State private var stops: [RoutePoint] = []
     @Environment(\.dismiss) private var dismiss
+    @Environment(AppState.self) private var appState
     
     var body: some View {
         NavigationStack {
             List {
                 Section("Route Map") {
-                    MultiDayPlannerMapViewControllerRepresentable(
-                        stops: $stops,
-                        route: route,
-                        mapFrameHeight: 350,
-                        onUpdateSelectedRoutePoint: addRoutePointToStops
-                    )
-                    .frame(height: 350)
-                    .listRowInsets(EdgeInsets())
+                    if let selectedRoute = appState.selectedRoute {
+                        MultiDayPlannerMapViewControllerRepresentable(
+                            stops: $stops,
+                            route: selectedRoute,
+                            mapFrameHeight: 350,
+                            onUpdateSelectedRoutePoint: addRoutePointToStops
+                        )
+                        .frame(height: 350)
+                        .listRowInsets(EdgeInsets())
+                    }
                 }
                 
                 Section("Stops") {
@@ -97,6 +98,8 @@ extension MultiDayPlannerSheet {
     }
     
     internal func saveMultiDayPlan() {
+        guard let route = appState.selectedRoute else { return }
+        
         let routePoints = route.points
         var newRoutePoints = [RoutePoint]()
         

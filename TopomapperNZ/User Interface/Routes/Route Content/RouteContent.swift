@@ -93,7 +93,7 @@ struct RouteContent: View {
             EditRouteSheet(route: route)
         }
         .sheet(isPresented: $isPresentingMultiDayPlannerSheet) {
-            MultiDayPlannerSheet(route: route)
+            MultiDayPlannerSheet()
         }
     }
 }
