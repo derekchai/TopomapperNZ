@@ -84,7 +84,6 @@ struct RouteContent: View {
             } // VStack
             .padding()
         } // ScrollView
-        .onAppear(perform: setProperties)
         .navigationTitle(route.name)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -135,9 +134,6 @@ extension RouteContent {
     
     internal func contractElevationProfile() {
         isElevationProfileExpanded = false
-    }
-    
-    internal func setProperties() {
     }
 }
 
