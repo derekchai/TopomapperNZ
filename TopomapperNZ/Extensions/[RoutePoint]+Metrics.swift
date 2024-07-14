@@ -52,9 +52,10 @@ extension Array where Element == RoutePoint {
     
     /// Returns the total length of the `Route` (in meters).
     var length: CLLocationDistance {
+        guard let firstPoint = self.first else { return 0 }
         guard let lastPoint = self.last else { return 0 }
         
-        return lastPoint.distanceFromStart
+        return lastPoint.distanceFromStart - firstPoint.distanceFromStart
     }
     
     /// Returns the cumulative elevation gain of the `Route` (in meters).
