@@ -10,18 +10,22 @@ import MapKit
 import Charts
 
 struct RouteContent: View {
+    
+    // MARK: - Exposed Properties
     @Binding var preferredColumn: NavigationSplitViewColumn
     var route: Route
     
+    // MARK: - Private Properties
     @State internal var isPresentingEditRouteSheet = false
     @State internal var isPresentingMultiDayPlannerSheet = false
-    
     @State internal var isElevationProfileExpanded = false
     
+    // MARK: - Computed Properties
     internal var routePointsByDays: [Int: [RoutePoint]] {
         route.pointsByDays
     }
     
+    // MARK: - Private Constants
     private let mapFrameHeight: CGFloat = 350
     
     // MARK: - Body
