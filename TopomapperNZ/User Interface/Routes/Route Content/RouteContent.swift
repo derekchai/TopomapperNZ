@@ -79,7 +79,7 @@ struct RouteContent: View {
                     Text("Day \(i + 1)")
                         .font(.headline)
                     
-                    RoutePointsStatistics(points: routePointsByDays[i + 1]!)
+                    RoutePointsStatistics(points: routePointsByDays[i + 1] ?? [])
                 }
             } // VStack
             .padding()
