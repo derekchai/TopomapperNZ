@@ -11,89 +11,97 @@ import Charts
 
 struct RouteContent: View {
     @Binding var preferredColumn: NavigationSplitViewColumn
-    let route: Route
+    
+    @Environment(AppState.self) internal var appState
     
     @State internal var isPresentingEditRouteSheet = false
     @State internal var isPresentingMultiDayPlannerSheet = false
     
     @State internal var isElevationProfileExpanded = false
     
-    @State internal var routePointsByDays = [Int: [RoutePoint]]()
+//    @State internal var routePointsByDays = [Int: [RoutePoint]]()
+    internal var routePointsByDays: [Int: [RoutePoint]] {
+        guard let selectedRoute = appState.selectedRoute else { return [:] }
+        
+        return selectedRoute.pointsByDays
+    }
     
     private let mapFrameHeight: CGFloat = 350
     
     // MARK: - Body
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                
-                // MARK: - Map
-#if os(iOS)
-                SectionHeader(title: "Route Map")
-                
-                RouteMapViewControllerRepresentable(
-                    route: route,
-                    mapFrameHeight: mapFrameHeight
-                )
-                .frame(height: mapFrameHeight)
-                .onTapGesture(perform: showDetailColumn)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                
-                Text("Created on \(route.creationDate.formatted())")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-#endif
-                
-                // MARK: - Statistics
-                SectionHeader(title: "Statistics")
-                    .padding(.top)
-                
-                RoutePointsStatistics(points: route.points)
-                
-                // MARK: - Elevation Profile
-#if os(iOS)
-                SectionHeader(title: "Elevation Profile") {
-                    if isElevationProfileExpanded {
-                        contractedElevationProfileButton
-                    } else {
-                        expandedElevationProfileButton
-                    }
-                }
-                .padding(.top)
-                
-                RouteElevationProfileChart(
-                    route: route, isElevationProfileExpanded: $isElevationProfileExpanded
-                )
-                .onTapGesture(perform: showDetailColumn)
-#endif
-                
-                // MARK: - Breakdown by Day
-                SectionHeader(title: "Breakdown by Day") {
-                    Button("Add Day") { isPresentingMultiDayPlannerSheet = true }
-                }
-                    .padding(.top)
-                
-                ForEach(0..<routePointsByDays.count, id: \.self) { i in
-                    Text("Day \(i + 1)")
-                        .font(.headline)
+        if let route = appState.selectedRoute {
+            ScrollView {
+                VStack(alignment: .leading) {
                     
-                    RoutePointsStatistics(points: routePointsByDays[i + 1]!)
+                    // MARK: - Map
+#if os(iOS)
+                    SectionHeader(title: "Route Map")
+                    
+                    RouteMapViewControllerRepresentable(
+                        route: route,
+                        mapFrameHeight: mapFrameHeight
+                    )
+                    .frame(height: mapFrameHeight)
+                    .onTapGesture(perform: showDetailColumn)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    
+                    Text("Created on \(route.creationDate.formatted())")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+#endif
+                    
+                    // MARK: - Statistics
+                    SectionHeader(title: "Statistics")
+                        .padding(.top)
+                    
+                    RoutePointsStatistics(points: route.points)
+                    
+                    // MARK: - Elevation Profile
+#if os(iOS)
+                    SectionHeader(title: "Elevation Profile") {
+                        if isElevationProfileExpanded {
+                            contractedElevationProfileButton
+                        } else {
+                            expandedElevationProfileButton
+                        }
+                    }
+                    .padding(.top)
+                    
+                    RouteElevationProfileChart(
+                        route: route, isElevationProfileExpanded: $isElevationProfileExpanded
+                    )
+                    .onTapGesture(perform: showDetailColumn)
+#endif
+                    
+                    // MARK: - Breakdown by Day
+                    SectionHeader(title: "Breakdown by Day") {
+                        Button("Add Day") { isPresentingMultiDayPlannerSheet = true }
+                    }
+                    .padding(.top)
+                    
+                    ForEach(0..<routePointsByDays.count, id: \.self) { i in
+                        Text("Day \(i + 1)")
+                            .font(.headline)
+                        
+                        RoutePointsStatistics(points: routePointsByDays[i + 1] ?? [])
+                    }
+                } // VStack
+                .padding()
+            } // ScrollView
+            .onAppear(perform: setProperties)
+            .navigationTitle(route.name)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button("Edit", action: presentEditRouteSheet)
                 }
-            } // VStack
-            .padding()
-        } // ScrollView
-        .onAppear(perform: setProperties)
-        .navigationTitle(route.name)
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button("Edit", action: presentEditRouteSheet)
             }
-        }
-        .sheet(isPresented: $isPresentingEditRouteSheet) {
-            EditRouteSheet(route: route)
-        }
-        .sheet(isPresented: $isPresentingMultiDayPlannerSheet) {
-            MultiDayPlannerSheet()
+            .sheet(isPresented: $isPresentingEditRouteSheet) {
+                EditRouteSheet(route: route)
+            }
+            .sheet(isPresented: $isPresentingMultiDayPlannerSheet) {
+                MultiDayPlannerSheet()
+            }
         }
     }
 }
@@ -136,7 +144,9 @@ extension RouteContent {
     }
     
     internal func setProperties() {
-        self.routePointsByDays = route.pointsByDays
+        guard let route = appState.selectedRoute else { return }
+        
+//        self.routePointsByDays = route.pointsByDays
     }
 }
 

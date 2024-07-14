@@ -47,8 +47,7 @@ struct RoutesScene: View {
         } content: {
             if let selectedRoute = appState.selectedRoute {
                 RouteContent(
-                    preferredColumn: $preferredColumn,
-                    route: selectedRoute
+                    preferredColumn: $preferredColumn
                 )
             } else {
                 Text("Select a Route")
