@@ -34,8 +34,11 @@ struct MultiDayPlannerSheet: View {
                             description: Text("Tap on a point on the Route's path to add a stop there!")
                         )
                     } else {
-                        ForEach(stops) { stop in
-                            Text(String(String(describing: stop.coordinate)))
+                        ForEach(0..<stops.count, id: \.self) { i in
+                            Label(
+                                "\(stops[i].coordinate.latitude), \(stops[i].coordinate.longitude)",
+                                systemImage: "\(i + 1).circle.fill"
+                            )
                         }
                         .onDelete(perform: deleteStops)
                     }
