@@ -41,6 +41,13 @@ extension RouteMapViewController: MKMapViewDelegate {
                 annotation: startEndAnnotation,
                 reuseIdentifier: identifier
             )
+            
+        case let stopAnnotation as StopAnnotation:
+            return StopAnnotationView(
+                annotation: stopAnnotation,
+                reuseIdentifier: identifier
+            )
+            
         default:
             fatalError("Unhandled annotation type: \(annotation).")
         }
