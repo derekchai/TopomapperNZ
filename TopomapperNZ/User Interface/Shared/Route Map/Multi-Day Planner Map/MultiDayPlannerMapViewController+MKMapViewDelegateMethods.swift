@@ -27,18 +27,10 @@ extension MultiDayPlannerMapViewController {
             )
             
         case let routePointSelectionAnnotation as StopAnnotation:
-            let marker = MKMarkerAnnotationView(
+            return StopAnnotationView(
                 annotation: routePointSelectionAnnotation,
                 reuseIdentifier: identifier
             )
-            
-            marker.animatesWhenAdded = true
-            marker.canShowCallout = false
-            marker.glyphImage = UIImage(
-                systemName: "\(routePointSelectionAnnotation.number).circle.fill"
-            )
-            
-            return marker
             
         default:
             fatalError("Unhandled annotation type: \(annotation).")
