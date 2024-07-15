@@ -16,6 +16,13 @@ struct RouteElevationProfileChart: View {
     @State private var routePointSelection: RoutePoint?
     private let stops: [RoutePoint]
     
+    private let areaGradient = LinearGradient(
+        colors: [.blue.opacity(0.5), .blue.opacity(0.2), .blue.opacity(0.05)],
+        startPoint: .top,
+        endPoint: .bottom
+    )
+    
+    
     // MARK: - Initializer
     init(
         route: Route,
@@ -34,6 +41,13 @@ struct RouteElevationProfileChart: View {
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
+            
+            AreaPlot(
+                route.points,
+                x: .value("Distance from start", \.distanceFromStart),
+                y: .value("Elevation", \.elevation)
+            )
+            .foregroundStyle(areaGradient)
             
             if let rawXSelection {
                 RuleMark(x: .value("Distance", rawXSelection))
