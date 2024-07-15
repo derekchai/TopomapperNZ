@@ -12,6 +12,7 @@ enum Symbol {
     static let map = "map"
     static let profile = "person.crop.circle"
     static let distance = "arrow.left.and.right"
+    static let elevation = "arrowtriangle.up"
     static let elevationGain = "arrow.up.forward"
     static let elevationLoss = "arrow.down.forward"
     static let expandHorizontal = "arrow.left.and.line.vertical.and.arrow.right"
