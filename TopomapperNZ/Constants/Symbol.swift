@@ -21,4 +21,5 @@ enum Symbol {
     static let sortBy = "arrow.up.arrow.down"
     static let add = "plus"
     static let noStops = "flag.slash"
+    static let distanceFromStart = "arrow.forward.to.line"
 }
