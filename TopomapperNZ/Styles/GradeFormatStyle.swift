@@ -16,7 +16,7 @@ struct GradeFormatStyle: FormatStyle {
     }
 }
 
-extension FormatStyle where Self == ElevationFormatStyle {
+extension FormatStyle where Self == GradeFormatStyle {
     /// A style for formatting grade as a percentage.
     static var grade: Self { Self() }
 }
