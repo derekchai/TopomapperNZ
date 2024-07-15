@@ -45,4 +45,26 @@ extension Route {
         
         return output
     }
+    
+    /// Returns an array of all the stops in this `Route`.
+    ///
+    /// A stop is a boundary between two `RoutePoint`s with different `day`
+    /// properties. This function returns the first `RoutePoint` in the `Route`'s
+    /// `points` property with the differing day.
+    var stops: [RoutePoint] {
+        var currentDay = 1
+        var stops: [RoutePoint] = []
+        
+        for point in self.points {
+            guard let day = point.day else { continue }
+            
+            if day != currentDay {
+                stops.append(point)
+                
+                currentDay += 1
+            }
+        }
+        
+        return stops
+    }
 }
