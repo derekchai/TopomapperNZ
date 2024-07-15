@@ -33,6 +33,12 @@ struct RouteContent: View {
         ScrollView {
             VStack(alignment: .leading) {
                 
+                // MARK: - Statistics
+                SectionHeader(title: "Statistics")
+                    .padding(.top)
+                
+                RoutePointsStatistics(points: route.points)
+                
                 // MARK: - Map
 #if os(iOS)
                 SectionHeader(title: "Route Map")
@@ -46,12 +52,6 @@ struct RouteContent: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 
 #endif
-                
-                // MARK: - Statistics
-                SectionHeader(title: "Statistics")
-                    .padding(.top)
-                
-                RoutePointsStatistics(points: route.points)
                 
                 // MARK: - Elevation Profile
 #if os(iOS)
