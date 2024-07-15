@@ -40,6 +40,38 @@ struct RouteElevationProfileChart: View {
                     .foregroundStyle(.gray.opacity(0.6))
                     .offset(yStart: -10)
                     .zIndex(-1)
+                    .annotation(
+                        position: .top,
+                        spacing: 15,
+                        overflowResolution: .init(
+                            x: .fit(to: .chart),
+                            y: .disabled
+                        )) {
+                            if let routePointSelection {
+                                HStack {
+                                    Statistic(
+                                        label: "From start",
+                                        systemImageName: Symbol.distanceFromStart,
+                                        value: routePointSelection.distanceFromStart
+                                            .formatted(.routeLength)
+                                    )
+                                    
+                                    Statistic(
+                                        label: "Elevation",
+                                        systemImageName: Symbol.elevation,
+                                        value: routePointSelection.elevation
+                                            .formatted(.elevation)
+                                    )
+                                    
+                                    Statistic(
+                                        label: "Grade",
+                                        systemImageName: Symbol.grade,
+                                        value: routePointSelection.grade
+                                            .formatted(.grade)
+                                    )
+                                }
+                            }
+                        }
             }
             
             ForEach(stops) { stop in
