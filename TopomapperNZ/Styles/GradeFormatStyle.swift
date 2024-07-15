@@ -12,7 +12,7 @@ struct GradeFormatStyle: FormatStyle {
     typealias FormatOutput = String
 
     func format(_ value: Double) -> String {
-        String(format: "%.1f%", value * 100)
+        String(format: "%.1f", value * 100) + "%"
     }
 }
 
