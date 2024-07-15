@@ -9,7 +9,7 @@ import Foundation
 import SwiftUICore
 
 private let routeListItemPathStrokeStyle = StrokeStyle(
-    lineWidth: 2,
+    lineWidth: 1.5,
     lineCap: .round,
     lineJoin: .round
 )
