@@ -14,6 +14,18 @@ struct RouteElevationProfileChart: View {
     
     @State private var rawXSelection: Double?
     @State private var routePointSelection: RoutePoint?
+    private let stops: [RoutePoint]
+    
+    // MARK: - Initializer
+    init(
+        route: Route,
+        isElevationProfileExpanded: Binding<Bool>
+    ) {
+        self.route = route
+        _isElevationProfileExpanded = isElevationProfileExpanded
+        
+        stops = route.stops
+    }
     
     var body: some View {
         Chart {
@@ -29,6 +41,18 @@ struct RouteElevationProfileChart: View {
                     .offset(yStart: -10)
                     .zIndex(-1)
             }
+            
+            ForEach(stops) { stop in
+                RuleMark(x: .value("Distance", stop.distanceFromStart))
+                    .foregroundStyle(.blue.opacity(0.3))
+                    .offset(yStart: -10)
+                    .zIndex(-1)
+                    .annotation {
+                        Image(systemName: "\(stop.day!).circle.fill")
+                            .foregroundStyle(.blue.opacity(0.5))
+                            .font(.system(size: 11))
+                    }
+            }
         }
         .frame(height: 200)
         .chartXAxis {
@@ -42,6 +66,7 @@ struct RouteElevationProfileChart: View {
             view.chartScrollableAxes(.horizontal)
         }
         .onChange(of: rawXSelection, updateRoutePointSelection)
+        .padding(.top)
     }
 }
 
