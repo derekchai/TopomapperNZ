@@ -15,6 +15,7 @@ enum Symbol {
     static let elevation = "arrowtriangle.up"
     static let elevationGain = "arrow.up.forward"
     static let elevationLoss = "arrow.down.forward"
+    static let grade = "angle"
     static let expandHorizontal = "arrow.left.and.line.vertical.and.arrow.right"
     static let contractHorizontal = "arrow.right.and.line.vertical.and.arrow.left"
     static let startPoint = "a.circle.fill"
