@@ -40,6 +40,7 @@ class RouteMapViewController: UIViewController {
         addTopo50Overlay()
         addRoutePolylines()
         addStartEndAnnotations()
+        addStopAnnotations()
         
         self.view = mapView
     }
@@ -90,6 +91,19 @@ class RouteMapViewController: UIViewController {
     internal func addStartEndAnnotations() {
         for annotation in route.startEndAnnotation {
             mapView.addAnnotation(annotation)
+        }
+    }
+    
+    /// Adds the `Route`'s stop annotations to the map.
+    internal func addStopAnnotations() {
+        for stop in route.stops {
+            guard let day = stop.day else { continue }
+            
+            let stopAnnotation = StopAnnotation(
+                coordinate: stop.coordinate,
+                number: day
+            )
+            mapView.addAnnotation(stopAnnotation)
         }
     }
 }
