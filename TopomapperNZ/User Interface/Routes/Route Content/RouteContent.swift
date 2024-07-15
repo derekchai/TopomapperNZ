@@ -45,9 +45,6 @@ struct RouteContent: View {
                 .onTapGesture(perform: showDetailColumn)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 
-                Text("Created on \(route.creationDate.formatted())")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
 #endif
                 
                 // MARK: - Statistics
@@ -93,6 +90,12 @@ struct RouteContent: View {
                         RoutePointsStatistics(points: routePointsByDays[i + 1] ?? [])
                     }
                 }
+                
+                Divider()
+                
+                Text("Route created on \(route.creationDate.formatted())")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
                 
             } // VStack
             .padding()
