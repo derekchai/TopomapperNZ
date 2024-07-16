@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 
+/// An `MKOverlay` which can represent the path of a `Route`.
 protocol RoutePathRepresentable: MKOverlay {
     
 }
