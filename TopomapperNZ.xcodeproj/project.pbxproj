@@ -55,6 +55,7 @@
 		A8A769162C44C6540095A917 /* StopAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769152C44C6540095A917 /* StopAnnotationView.swift */; };
 		A8A7691A2C44EDB30095A917 /* GradeFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769192C44EDB30095A917 /* GradeFormatStyle.swift */; };
 		A8A769242C46799F0095A917 /* TwoDimensionalValueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769232C46799F0095A917 /* TwoDimensionalValueRepresentable.swift */; };
+		A8A769262C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769252C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -153,6 +154,7 @@
 		A8A769152C44C6540095A917 /* StopAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotationView.swift; sourceTree = "<group>"; };
 		A8A769192C44EDB30095A917 /* GradeFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeFormatStyle.swift; sourceTree = "<group>"; };
 		A8A769232C46799F0095A917 /* TwoDimensionalValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDimensionalValueRepresentable.swift; sourceTree = "<group>"; };
+		A8A769252C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePoint+TwoDimensionalValueRepresentable.swift"; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */,
 				A8A768FB2C435AC10095A917 /* RoutePoint+Equatable.swift */,
 				A8A768FF2C436FAC0095A917 /* RoutePoint+Hashable.swift */,
+				A8A769252C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift */,
 			);
 			path = "Protocol Conformance";
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */,
 				A8CA0BF02C3BFBBA007035F7 /* GPXTrackPoint+Distance.swift in Sources */,
 				A852FD252C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift in Sources */,
+				A8A769262C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift in Sources */,
 				A852FD1B2C40CD190067D203 /* MKMapView+DistanceFromPointByNumberOfPixelsHorizontallyAcross.swift in Sources */,
 				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
 				A8A768FE2C436ED20095A917 /* RoutePointsStatistics.swift in Sources */,
