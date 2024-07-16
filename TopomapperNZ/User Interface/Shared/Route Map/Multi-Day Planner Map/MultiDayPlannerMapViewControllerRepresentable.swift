@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresentable, MultiDayPlannerMapViewControllerDelegate {
+struct MultiDayPlannerMapViewControllerRepresentable: UIViewControllerRepresentable, MultiDayPlannerMapViewController.Delegate {
     @Binding var stops: [RoutePoint]
     
     let route: Route

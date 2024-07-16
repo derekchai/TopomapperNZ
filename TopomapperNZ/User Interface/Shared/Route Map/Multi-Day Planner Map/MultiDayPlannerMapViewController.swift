@@ -12,13 +12,13 @@ import MapKit
 
 class MultiDayPlannerMapViewController: RouteMapViewController {
     let coordinateRoutePointDictionary: [CLLocationCoordinate2D: RoutePoint]
-    let delegate: MultiDayPlannerMapViewControllerDelegate?
+    let delegate: MultiDayPlannerMapViewController.Delegate?
     
     // MARK: - Initializers
     init(
         route: Route,
         mapFrameHeight: CGFloat,
-        delegate: MultiDayPlannerMapViewControllerDelegate? = nil
+        delegate: MultiDayPlannerMapViewController.Delegate? = nil
     ) {
         self.coordinateRoutePointDictionary = route.coordinateRoutePointDictionary
         self.delegate = delegate
@@ -123,6 +123,8 @@ class MultiDayPlannerMapViewController: RouteMapViewController {
 }
 
 // MARK: - Delegate Protocol
-protocol MultiDayPlannerMapViewControllerDelegate {
-    func didUpdateSelectedRoutePoint(to newRoutePoint: RoutePoint?)
+extension MultiDayPlannerMapViewController {
+    protocol Delegate {
+        func didUpdateSelectedRoutePoint(to newRoutePoint: RoutePoint?)
+    }
 }
