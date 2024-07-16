@@ -14,7 +14,11 @@ struct RouteElevationProfileChart: View {
     
     @State private var rawXSelection: Double?
     @State private var routePointSelection: RoutePoint?
+    @State private var epsilon: Double = 0
     private let stops: [RoutePoint]
+    private var simplifiedRoutePoints: [RoutePoint] {
+        route.points.decimated(ε: epsilon)
+    }
     
     private let areaGradient = LinearGradient(
         colors: [.blue.opacity(0.5), .blue.opacity(0.2), .blue.opacity(0.05)],
@@ -37,13 +41,13 @@ struct RouteElevationProfileChart: View {
     var body: some View {
         Chart {
             LinePlot(
-                route.points,
+                simplifiedRoutePoints,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
             
             AreaPlot(
-                route.points,
+                simplifiedRoutePoints,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
@@ -113,6 +117,15 @@ struct RouteElevationProfileChart: View {
         }
         .onChange(of: rawXSelection, updateRoutePointSelection)
         .padding(.top)
+        
+        Text(
+            "\(simplifiedRoutePoints.count) points simplified from \(route.points.count)"
+        )
+        
+        Slider(value: $epsilon, in: 0...50, step: 0.1)
+            .padding()
+        
+        Text("ε: \(epsilon)")
     }
 }
 
