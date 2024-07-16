@@ -10,5 +10,6 @@ import MapKit
 
 /// An `MKOverlay` which can represent the path of a `Route`.
 protocol RoutePathRepresentable: MKOverlay {
-    
+    /// The renderer for this overlay.
+    var renderer: MKPolylineRenderer { get }
 }
