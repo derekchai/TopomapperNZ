@@ -56,6 +56,7 @@
 		A8A7691A2C44EDB30095A917 /* GradeFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769192C44EDB30095A917 /* GradeFormatStyle.swift */; };
 		A8A769242C46799F0095A917 /* TwoDimensionalValueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769232C46799F0095A917 /* TwoDimensionalValueRepresentable.swift */; };
 		A8A769262C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769252C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift */; };
+		A8A769282C467B500095A917 /* [TwoDimensionalValueRepresentable]+InstanceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A769272C467B500095A917 /* [TwoDimensionalValueRepresentable]+InstanceMethods.swift */; };
 		A8CA0BD52C3BB8F0007035F7 /* Route+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */; };
 		A8CA0BD72C3BB91C007035F7 /* Route+Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */; };
 		A8CA0BD92C3BBE30007035F7 /* Route+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */; };
@@ -155,6 +156,7 @@
 		A8A769192C44EDB30095A917 /* GradeFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeFormatStyle.swift; sourceTree = "<group>"; };
 		A8A769232C46799F0095A917 /* TwoDimensionalValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDimensionalValueRepresentable.swift; sourceTree = "<group>"; };
 		A8A769252C467A960095A917 /* RoutePoint+TwoDimensionalValueRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoutePoint+TwoDimensionalValueRepresentable.swift"; sourceTree = "<group>"; };
+		A8A769272C467B500095A917 /* [TwoDimensionalValueRepresentable]+InstanceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "[TwoDimensionalValueRepresentable]+InstanceMethods.swift"; sourceTree = "<group>"; };
 		A8CA0BD42C3BB8F0007035F7 /* Route+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Equatable.swift"; sourceTree = "<group>"; };
 		A8CA0BD62C3BB91C007035F7 /* Route+Hashable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Hashable.swift"; sourceTree = "<group>"; };
 		A8CA0BD82C3BBE30007035F7 /* Route+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Route+Codable.swift"; sourceTree = "<group>"; };
@@ -405,8 +407,9 @@
 				A8D6865C2C3D081C00B725F6 /* Route+Helpers.swift */,
 				A852FD242C410EC80067D203 /* Route+CoordinateRoutePointDictionary.swift */,
 				A8D686842C3E2F4600B725F6 /* View+ConditionalViewModifier.swift */,
-				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
 				A852FD262C4114B20067D203 /* Double+Rounding.swift */,
+				A8A769272C467B500095A917 /* [TwoDimensionalValueRepresentable]+InstanceMethods.swift */,
+				A8CA0BE62C3BF815007035F7 /* Protocol Conformance */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 				A8D686802C3E26AA00B725F6 /* Route+Annotations&Overlays.swift in Sources */,
 				A8A768FE2C436ED20095A917 /* RoutePointsStatistics.swift in Sources */,
 				A852FD232C410DE20067D203 /* CLLocationCoordinate2D+Equatable.swift in Sources */,
+				A8A769282C467B500095A917 /* [TwoDimensionalValueRepresentable]+InstanceMethods.swift in Sources */,
 				A8CA0BEA2C3BF887007035F7 /* [RoutePoint]+Initializers.swift in Sources */,
 				A8A053B42C3E8B7F002DB74E /* StartEndAnnotationView.swift in Sources */,
 				A852FD2B2C41273B0067D203 /* MultiDayPlannerSheet.swift in Sources */,
