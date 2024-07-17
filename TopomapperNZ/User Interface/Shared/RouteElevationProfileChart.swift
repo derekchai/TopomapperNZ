@@ -16,6 +16,7 @@ struct RouteElevationProfileChart: View {
     @State private var routePointSelection: RoutePoint?
     @State private var epsilon: Double = 0
     private let stops: [RoutePoint]
+    private let simplifiedRoutePoints: [RoutePoint]
     private var chartRoutePoints: [RoutePoint] {
         route.points.decimated(ε: epsilon)
     }
@@ -36,6 +37,7 @@ struct RouteElevationProfileChart: View {
         _isElevationProfileExpanded = isElevationProfileExpanded
         
         stops = route.stops
+        simplifiedRoutePoints = route.points.decimated(target: 150)
     }
     
     var body: some View {
@@ -122,6 +124,8 @@ struct RouteElevationProfileChart: View {
             "\(chartRoutePoints.count) points simplified from \(route.points.count)"
         )
         
+        Text("\(simplifiedRoutePoints.count) simplified points")
+        
         Slider(value: $epsilon, in: 0...50, step: 0.1)
             .padding()
         
@@ -133,7 +137,7 @@ struct RouteElevationProfileChart: View {
 extension RouteElevationProfileChart {
     internal func updateRoutePointSelection(_: Double?, _ newRawXSelectionValue: Double?) {
         if let newRawXSelectionValue {
-            routePointSelection = route.points.nearestPoint(to: newRawXSelectionValue)
+            routePointSelection = simplifiedRoutePoints.nearestPoint(to: newRawXSelectionValue)
         } else {
             routePointSelection = nil
         }
