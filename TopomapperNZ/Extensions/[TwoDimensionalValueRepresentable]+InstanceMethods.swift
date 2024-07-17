@@ -47,6 +47,23 @@ extension Array where Element: TwoDimensionalValueRepresentable {
             return [self[0], self[end]]
         }
     }
+    
+    /// Decimates (downsamples) an array of values representing a 2D curve
+    /// composed of line segments to a curve with fewer points.
+    ///
+    /// This method simply keeps every `strideBy` elements in the output array.
+    /// - Parameter strideBy: The stride count.
+    /// - Returns: The decimated array.
+    /// - Complexity: O(n ÷ stride); O(n) in the worst case.
+    func decimated(strideBy stride: Int) -> [Element] {
+        var output = [Element]()
+        
+        for i in Swift.stride(from: 0, to: self.count, by: stride) {
+            output.append(self[i])
+        }
+        
+        return output
+    }
 }
 
 /// Returns the perpindicular distance from a point to a line.
