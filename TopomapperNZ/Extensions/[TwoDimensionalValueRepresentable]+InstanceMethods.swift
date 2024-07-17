@@ -64,6 +64,16 @@ extension Array where Element: TwoDimensionalValueRepresentable {
         
         return output
     }
+    
+    /// Decimates (downsamples) an array of values to an array with approximately
+    /// the `target` number of elements.
+    /// - Parameter target: The approximate number of elements to aim for.
+    /// - Returns: The decimated array.
+    func decimated(target: Int) -> [Element] {
+        if target >= self.count { return self }
+        
+        return self.decimated(strideBy: self.count / target)
+    }
 }
 
 /// Returns the perpindicular distance from a point to a line.
