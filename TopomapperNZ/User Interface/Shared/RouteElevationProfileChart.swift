@@ -16,7 +16,7 @@ struct RouteElevationProfileChart: View {
     @State private var routePointSelection: RoutePoint?
     @State private var epsilon: Double = 0
     private let stops: [RoutePoint]
-    private var simplifiedRoutePoints: [RoutePoint] {
+    private var chartRoutePoints: [RoutePoint] {
         route.points.decimated(ε: epsilon)
     }
     
@@ -41,13 +41,13 @@ struct RouteElevationProfileChart: View {
     var body: some View {
         Chart {
             LinePlot(
-                simplifiedRoutePoints,
+                chartRoutePoints,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
             
             AreaPlot(
-                simplifiedRoutePoints,
+                chartRoutePoints,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
@@ -119,7 +119,7 @@ struct RouteElevationProfileChart: View {
         .padding(.top)
         
         Text(
-            "\(simplifiedRoutePoints.count) points simplified from \(route.points.count)"
+            "\(chartRoutePoints.count) points simplified from \(route.points.count)"
         )
         
         Slider(value: $epsilon, in: 0...50, step: 0.1)
