@@ -14,19 +14,15 @@ struct RouteElevationProfileChart: View {
     
     @State private var rawXSelection: Double?
     @State private var routePointSelection: RoutePoint?
-    @State private var epsilon: Double = 0
     private let stops: [RoutePoint]
     private let simplifiedRoutePoints: [RoutePoint]
-    private var chartRoutePoints: [RoutePoint] {
-        route.points.decimated(ε: epsilon)
-    }
     
+    private let chartData: [RoutePoint]
     private let areaGradient = LinearGradient(
         colors: [.blue.opacity(0.5), .blue.opacity(0.2), .blue.opacity(0.05)],
         startPoint: .top,
         endPoint: .bottom
     )
-    
     
     // MARK: - Initializer
     init(
@@ -38,18 +34,21 @@ struct RouteElevationProfileChart: View {
         
         stops = route.stops
         simplifiedRoutePoints = route.points.decimated(target: 150)
+        
+        let epsilon = log(Double(route.points.count)) / 10
+        chartData = route.points.decimated(ε: epsilon)
     }
     
     var body: some View {
         Chart {
             LinePlot(
-                chartRoutePoints,
+                chartData,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
             
             AreaPlot(
-                chartRoutePoints,
+                chartData,
                 x: .value("Distance from start", \.distanceFromStart),
                 y: .value("Elevation", \.elevation)
             )
@@ -120,16 +119,13 @@ struct RouteElevationProfileChart: View {
         .onChange(of: rawXSelection, updateRoutePointSelection)
         .padding(.top)
         
-        Text(
-            "\(chartRoutePoints.count) points simplified from \(route.points.count)"
-        )
-        
-        Text("\(simplifiedRoutePoints.count) simplified points")
-        
-        Slider(value: $epsilon, in: 0...50, step: 0.1)
-            .padding()
-        
-        Text("ε: \(epsilon)")
+        Group {
+            Text("Original n: \(route.points.count)")
+            Text("Chart data n: \(chartData.count)")
+            Text("Point matching n: \(simplifiedRoutePoints.count)")
+        }
+        .font(.caption)
+        .foregroundStyle(.secondary)
     }
 }
 
